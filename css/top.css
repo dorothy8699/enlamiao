@@ -9,3 +9,29 @@ body {
 .breadcrumb-area{
 height:100px;background:url(../image/bg.jpg);background-repeat:repeat-y;
 }
+
+
+.circle img{
+	width: 300px;
+	height: 300px;
+	background-color: #e7f4f5;
+	-webkit-border-radius: 150px;
+	border-radius:150px;
+}
+
+.box-shadow{  
+  -moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #000000;
+} 
+
+
+.step{
+	list-style:none;
+}
+
+.step tr:nth-child(1) td{
+	padding:50px 50px 0 50px;
+}
+
+.step tr:nth-child(2) td{
+	padding-left:130px;
+}
