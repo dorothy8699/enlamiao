@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-03 16:35:36
+/* Smarty version 3.1.29, created on 2016-06-04 12:03:38
   from "C:\xampp\htdocs\enlamiao\view\create.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575195b81cf893_31353687',
+  'unifunc' => 'content_5752a77a8dd434_01086575',
   'file_dependency' => 
   array (
     '7fa475691761790701231fe43c74e9d05fb96163' => 
     array (
       0 => 'C:\\xampp\\htdocs\\enlamiao\\view\\create.tpl',
-      1 => 1464964534,
+      1 => 1465034615,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575195b81cf893_31353687 ($_smarty_tpl) {
+function content_5752a77a8dd434_01086575 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,9 +48,10 @@ function content_575195b81cf893_31353687 ($_smarty_tpl) {
  </div>
 
 <div style="margin-top:-30px;background:#e7f4f5;color:#183654;">
-<div style="padding:50px 10% 20px 10%;font-size:20px;">
+<div style="padding:50px 10% 20px 10%;font-size:11px;">
 <form action="../action/confirm.php" method="post">
     <table style="width:100%;">
+    <tr><td><img src="image/step1.svg" width="100px"></td></tr> 
     <tr>
       <td style="width:20%">
         <div style="height:70px;line-height:70px;">主题:</div>
@@ -58,7 +59,7 @@ function content_575195b81cf893_31353687 ($_smarty_tpl) {
 
       <td style="width:60%">
         <div style="height:50px;line-height:50px;width:100%">
-          <input type="text" id="title" name="title" style="height:45px;width:100%;font-size:20px;">
+          <input type="text" id="title" name="title" style="height:25px;width:100%;font-size:20px;">
         </div>
       </td> 
 
@@ -68,21 +69,7 @@ function content_575195b81cf893_31353687 ($_smarty_tpl) {
 
     </tr>
 
-    <tr>
-      <td style="width:20%">
-        <div style="height:50px;line-height:50px;">时间:</div>
-      </td>
-
-       <td style="width:60%">
-        <input type="text" id="datepicker" name="start" style="height:45px;width:100%;font-size:20px;">
-        
-      </td>
-
-      <td style="width:20%">
-      
-      <td> 
-
-    </tr>
+    
 
     <tr>
       <td style="width:20%">
@@ -101,14 +88,32 @@ function content_575195b81cf893_31353687 ($_smarty_tpl) {
       
     </tr>
 
+  <tr><td><img src="image/step2.svg" width="100px"></td></tr> 
+    <tr>
+      <td style="width:20%">
+        <div style="height:50px;line-height:50px;">候补时间:</div>
+      </td>
+
+       <td style="width:60%">
+        <input type="text" id="datepicker" name="start" style="height:25px;width:100%;font-size:20px;">
+        
+      </td>
+
+      <td style="width:20%">
+      
+      <td> 
+
+    </tr>
+
 
     <tr>
       <td>
       </td> 
       <td>
-      <div>
-          <input type="submit" value="提交喵">
-        </div>
+      <a href="?create">
+  <div class="box-shadow" style="width:150px;height:60px;line-height:60px;text-align:center;background:#f89f21;margin-left:30%;margin-top:30px;padding-left:30px;padding-right:30px;">提交喵
+  </div>
+</a>
       </td>
       <td>
       </td>
@@ -121,7 +126,9 @@ function content_575195b81cf893_31353687 ($_smarty_tpl) {
 
 
 <!-- footer start-->
-
+<div style="height:400px;background:#183654;color:#FFF;text-align:center;padding-top:30px;">
+Copyright © 2016 enlamiao All Rights Reserved.
+</div>
 <!-- footer end-->
 
 

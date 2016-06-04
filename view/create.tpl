@@ -17,9 +17,10 @@
  </div>
 
 <div style="margin-top:-30px;background:#e7f4f5;color:#183654;">
-<div style="padding:50px 10% 20px 10%;font-size:20px;">
+<div style="padding:50px 10% 20px 10%;font-size:11px;">
 <form action="../action/confirm.php" method="post">
     <table style="width:100%;">
+    <tr><td><img src="image/step1.svg" width="100px"></td></tr> 
     <tr>
       <td style="width:20%">
         <div style="height:70px;line-height:70px;">主题:</div>
@@ -27,7 +28,7 @@
 
       <td style="width:60%">
         <div style="height:50px;line-height:50px;width:100%">
-          <input type="text" id="title" name="title" style="height:45px;width:100%;font-size:20px;">
+          <input type="text" id="title" name="title" style="height:25px;width:100%;font-size:20px;">
         </div>
       </td> 
 
@@ -37,21 +38,7 @@
 
     </tr>
 
-    <tr>
-      <td style="width:20%">
-        <div style="height:50px;line-height:50px;">时间:</div>
-      </td>
-
-       <td style="width:60%">
-        <input type="text" id="datepicker" name="start" style="height:45px;width:100%;font-size:20px;">
-        
-      </td>
-
-      <td style="width:20%">
-      
-      <td> 
-
-    </tr>
+    
 
     <tr>
       <td style="width:20%">
@@ -70,14 +57,32 @@
       
     </tr>
 
+  <tr><td><img src="image/step2.svg" width="100px"></td></tr> 
+    <tr>
+      <td style="width:20%">
+        <div style="height:50px;line-height:50px;">候补时间:</div>
+      </td>
+
+       <td style="width:60%">
+        <input type="text" id="datepicker" name="start" style="height:25px;width:100%;font-size:20px;">
+        
+      </td>
+
+      <td style="width:20%">
+      
+      <td> 
+
+    </tr>
+
 
     <tr>
       <td>
       </td> 
       <td>
-      <div>
-          <input type="submit" value="提交喵">
-        </div>
+      <a href="?create">
+  <div class="box-shadow" style="width:150px;height:60px;line-height:60px;text-align:center;background:#f89f21;margin-left:30%;margin-top:30px;padding-left:30px;padding-right:30px;">提交喵
+  </div>
+</a>
       </td>
       <td>
       </td>
@@ -90,7 +95,9 @@
 
 
 <!-- footer start-->
-
+<div style="height:400px;background:#183654;color:#FFF;text-align:center;padding-top:30px;">
+Copyright © 2016 enlamiao All Rights Reserved.
+</div>
 <!-- footer end-->
 
 
