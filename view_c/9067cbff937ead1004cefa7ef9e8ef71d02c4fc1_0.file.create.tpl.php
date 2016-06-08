@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-06-08 17:39:31
+  from "/Applications/XAMPP/xamppfiles/htdocs/enlamiao/view/create.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_57583c33186889_20380581',
+  'file_dependency' => 
+  array (
+    '9067cbff937ead1004cefa7ef9e8ef71d02c4fc1' => 
+    array (
+      0 => '/Applications/XAMPP/xamppfiles/htdocs/enlamiao/view/create.tpl',
+      1 => 1465400369,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_57583c33186889_20380581 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,12 +29,20 @@
    <link rel="stylesheet" href="css/top.css" >
     
    
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <!--<?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/eggplant/jquery-ui.css" >
     -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/top.js"></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-1.11.3.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="js/top.js"><?php echo '</script'; ?>
+>
     
     
 		<title></title>
@@ -106,8 +137,11 @@ Copyright © 2016 enlamiao All Rights Reserved.
 
 </div>
 
-    <script src="js/jquery.datetimepicker.js"></script>
-    <script>
+    <?php echo '<script'; ?>
+ src="js/jquery.datetimepicker.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+>
     $('#datetimepicker').datetimepicker({
       inline:true,
       lang:'ch',
@@ -119,6 +153,9 @@ Copyright © 2016 enlamiao All Rights Reserved.
       }
 
     }); 
-    </script>
+    <?php echo '</script'; ?>
+>
 	</body>
 </html>
+<?php }
+}

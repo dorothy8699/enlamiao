@@ -52,3 +52,18 @@ text-decoration: none;
 a:active {
 text-decoration: none;
 }
+
+.createTable{
+	width:100%;border-collapse:separate; border-spacing:20px;
+}
+
+.createTableTr1Td2,.createTableTr2Td2,.createTableTr3Td2{
+
+	padding:40px;
+	
+	-moz-box-shadow:7px 7px 16px #a8b9c0; -webkit-box-shadow:7px 7px 16px #a8b9c0; box-shadow:7px 7px 16px #a8b9c0;
+}
+
+.createTableTr3Td2{
+
+}

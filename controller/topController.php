@@ -1,5 +1,5 @@
 <?php
-require '/core/MySmarty.class.php';
+require './core/MySmarty.class.php';
 /**
  * function showTop
  *

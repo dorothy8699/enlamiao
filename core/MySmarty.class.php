@@ -1,6 +1,6 @@
 <?php
 
-require '/smarty/Smarty.class.php';
+require './smarty/Smarty.class.php';
 class MySmarty extends Smarty{
 	function __construct()
 	{
