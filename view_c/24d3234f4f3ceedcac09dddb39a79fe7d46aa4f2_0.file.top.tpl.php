@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-03 16:28:02
+/* Smarty version 3.1.29, created on 2016-06-04 17:05:09
   from "C:\xampp\htdocs\enlamiao\view\top.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575193f265fb30_05801664',
+  'unifunc' => 'content_5752ee250ecde5_04384140',
   'file_dependency' => 
   array (
     '24d3234f4f3ceedcac09dddb39a79fe7d46aa4f2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\enlamiao\\view\\top.tpl',
-      1 => 1464964080,
+      1 => 1465052707,
       2 => 'file',
     ),
   ),
@@ -19,13 +19,16 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575193f265fb30_05801664 ($_smarty_tpl) {
+function content_5752ee250ecde5_04384140 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
     <?php echo '<script'; ?>
  type="text/javascript" src="js/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="js/top.js"><?php echo '</script'; ?>
 >
      <link rel="stylesheet" href="css/top.css" >
 		<title></title>
@@ -68,8 +71,8 @@ function content_575193f265fb30_05801664 ($_smarty_tpl) {
   </div>
 
 <a href="?create">
-  <div class="box-shadow" style="width:150px;height:60px;line-height:60px;text-align:center;background:#f89f21;margin-left:30%;margin-top:30px;padding-left:30px;padding-right:30px;">开始喵
-  </div>
+  <div id="start" style="display:block;"><img src="image/start.svg" width="300px"></div>
+  <div id="start-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
 </a>
 
 </div> 

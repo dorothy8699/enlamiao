@@ -2,6 +2,7 @@
 <html>
 	<head>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/top.js"></script>
      <link rel="stylesheet" href="css/top.css" >
 		<title></title>
 	</head>
@@ -43,8 +44,8 @@
   </div>
 
 <a href="?create">
-  <div class="box-shadow" style="width:150px;height:60px;line-height:60px;text-align:center;background:#f89f21;margin-left:30%;margin-top:30px;padding-left:30px;padding-right:30px;">开始喵
-  </div>
+  <div id="start" style="display:block;"><img src="image/start.svg" width="300px"></div>
+  <div id="start-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
 </a>
 
 </div> 
