@@ -1,38 +1,29 @@
-/*$ = jQuery.noConflict();
-J = jQuery.noConflict();
+
 $(document).ready(function(){
 
-    jQuery("#start").mouseenter(function(){
-    	jQuery("#start").hide();
-    	$("#start-hover").show();
+    jQuery(".btn").mouseenter(function(){
+    	jQuery(".btn").hide();
+    	$(".btn-hover").show();
     });
 
-        jQuery("#start-hover").mouseout(function(){
-    	jQuery("#start").show();
-    	jQuery("#start-hover").hide();
+    jQuery(".btn-hover").mouseout(function(){
+    	jQuery(".btn").show();
+    	jQuery(".btn-hover").hide();
     });
 
-    //jQuery("#datepicker").datepicker();    
-    $('#datetimepicker').datetimepicker();
+    jQuery("#okBtn").click(function(){
+    	$("#createForm").submit();
+    });
+
+    jQuery("#confirmBtn").click(function(){
+        $("#confirmForm").submit();
+    });
+
     
-});*/
-
-
-(function($) {
-
-$("#start").mouseenter(function(){
-    	$("#start").hide();
-    	$("#start-hover").show();
-    });
-
-        $("#start-hover").mouseout(function(){
-    	$("#start").show();
-    	$("#start-hover").hide();
-    });
-
-   // jQuery.datetimepicker.setLocale('ch');
-
-//jQuery('#datetimepicker').datetimepicker();
-
 });
+
+
+
+
+
 

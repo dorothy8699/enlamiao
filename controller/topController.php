@@ -5,7 +5,7 @@ require './core/MySmarty.class.php';
  *
  * @author Dorothy <koueig@gmail.com> 2015-04-22
  */ 
-function showTop(){		
+function init(){		
 		$smarty = new MySmarty();
 		$smarty->display('top.tpl');
 }

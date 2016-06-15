@@ -3,13 +3,7 @@
 	<head>
 
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
-   <link rel="stylesheet" href="css/top.css" >
-    
-   
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/eggplant/jquery-ui.css" >
-    -->
+    <link rel="stylesheet" href="css/top.css" >
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/top.js"></script>
     
@@ -30,7 +24,7 @@
 
 <div style="margin-top:-30px;background:#e7f4f5;color:#183654;">
 <div style="padding:50px 10% 20px 10%;font-size:11px;">
-<form action="../action/confirm.php" method="post">
+<form id="createForm" action="confirm.html" method="post">
     <table style="width:100%;border-collapse:separate; border-spacing:20px;border:1px solid #a8b9c0;">
     <tr>
       <td style="width:20%"><img src="image/step1.svg" width="200px"></td>
@@ -64,7 +58,7 @@
 
       <div style="float:left;width:55%;">
         <div><img src="image/time.svg" height="60px"></div>
-        <div><textarea id="datetimes" name="content" style="width:100%;font-size:20px;resize:none;" rows="11"></textarea></div>
+        <div><textarea id="datetimes" name="datetimes" style="width:100%;font-size:20px;resize:none;" rows="11"></textarea></div>
       </div>
 
       <div style="float:right;margin-top:70px;height:100px;">
@@ -79,10 +73,10 @@
       <td>
       </td> 
       <td>
-      <a href="?create">
-  <div id="start" style="display:block;"><img src="image/ok0.svg" width="300px"></div>
-  <div id="start-hover" style="display:none;"><img src="image/ok3.svg" width="300px"></div>
-</a>
+      <div id="okBtn">
+        <div class="btn" style="display:block;"><img src="image/ok0.svg" width="300px"></div>
+        <div class="btn-hover" style="display:none;"><img src="image/ok3.svg" width="300px"></div>
+      </div>
       </td>
       <td>
       </td>
@@ -112,6 +106,7 @@ Copyright © 2016 enlamiao All Rights Reserved.
       inline:true,
       lang:'ch',
       formatDate:'Y年m月d日',
+      format:'Y/m/d H:s〜',
       onSelectTime:function() {
         var datetime = $('#datetimes').val();
         var datetimes = datetime + $('#datetimepicker').val() + "\n";

@@ -43,9 +43,9 @@
   快点开始喵！
   </div>
 
-<a href="?create">
-  <div id="start" style="display:block;"><img src="image/start.svg" width="300px"></div>
-  <div id="start-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
+<a href="create.html">
+  <div class="btn" style="display:block;"><img src="image/start.svg" width="300px"></div>
+  <div class="btn-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
 </a>
 
 </div> 

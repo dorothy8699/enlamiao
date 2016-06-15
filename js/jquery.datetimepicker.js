@@ -89,7 +89,7 @@
 			},
 			ch:{ // Simplified Chinese
 				months: [
-					"一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"
+					"1","2","3","4","5","6","7","8","9","10","11","12"
 				],
 				dayOfWeek: [
 					"日", "一","二","三","四","五","六"
@@ -302,7 +302,7 @@
 				var datetimepicker = $('<div '+(options.id?'id="'+options.id+'"':'')+' '+(options.style?'style="'+options.style+'"':'')+' class="xdsoft_datetimepicker xdsoft_noselect '+options.className+'"></div>'),
 					xdsoft_copyright = $('<div class="xdsoft_copyright"><a target="_blank" href="http://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
 					datepicker = $('<div class="xdsoft_datepicker active"></div>'),
-					mounth_picker = $('<div class="xdsoft_mounthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button><div class="xdsoft_label xdsoft_month"><span></span></div><div class="xdsoft_label xdsoft_year"><span></span></div><button type="button" class="xdsoft_next"></button></div>'),
+					mounth_picker = $('<div class="xdsoft_mounthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button><div class="xdsoft_label xdsoft_year"><span></span></div><div class="xdsoft_label xdsoft_month"><span></span></div><button type="button" class="xdsoft_next"></button></div>'),
 					calendar = $('<div class="xdsoft_calendar"></div>'),
 					timepicker = $('<div class="xdsoft_timepicker active"><button type="button" class="xdsoft_prev"></button><div class="xdsoft_time_box"></div><button type="button" class="xdsoft_next"></button></div>'),
 					timeboxparent = timepicker.find('.xdsoft_time_box').eq(0),
@@ -791,8 +791,8 @@
 
 						calendar.html(table);
 
-						mounth_picker.find('.xdsoft_label span').eq(0).text(options.i18n[options.lang].months[_xdsoft_datetime.currentTime.getMonth()]);
-						mounth_picker.find('.xdsoft_label span').eq(1).text(_xdsoft_datetime.currentTime.getFullYear());
+						mounth_picker.find('.xdsoft_label span').eq(1).text(options.i18n[options.lang].months[_xdsoft_datetime.currentTime.getMonth()] + '月');
+						mounth_picker.find('.xdsoft_label span').eq(0).text(_xdsoft_datetime.currentTime.getFullYear() + "年");
 
 						// generate timebox
 						var time = '',

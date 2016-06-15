@@ -1,0 +1,7 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Redirect permanent http://localhost/enlamiao/create.html http://localhost/enlamiao?type=create
+Redirect permanent http://localhost/enlamiao/confirm.html http://localhost/enlamiao?type=confirm
+Redirect permanent http://localhost/enlamiao/finish.html http://localhost/enlamiao?type=finish
+order deny,allow
