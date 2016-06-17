@@ -1,0 +1,24 @@
+.pollTable{
+	margin-left: 10%;
+	margin-right:10%;
+	width: 80%;
+	color:#FFF;
+	border-spacing:0px;
+	border:solid #a8b9c0;
+	border-width:1px 0 0 1px;
+	/*-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #a8b9c0;*/
+
+}
+.pollTable tr{
+	
+}
+
+.pollTable tr td{
+	font-size:13px;
+	padding:5px 10px;
+	text-align: center;
+	border: solid #a8b9c0 ; 
+	border-width:0 1px 1px 0;
+}
+
+

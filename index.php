@@ -16,7 +16,7 @@ else if(strpos($req_type, 'list')){
 	require './controller/listController.php';
 }
 else if(strpos($req_type, 'poll')){
-	require './controller/pollController.php';
+	require './controller/boxController.php';
 }
 else{
 	require './controller/TopController.php';

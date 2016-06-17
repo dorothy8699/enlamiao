@@ -64,4 +64,19 @@ body {
 
 
 
+/* thickbox */
+#TB_window{
+	border:0;
+	background: #656263;
+}
 
+#TB_title{
+	background: #fbbf58;
+	color:#FFF;
+	text-align:center;
+	height: 50px;
+}
+
+#TB_ajaxWindowTitle{
+	text-align:center;
+}
