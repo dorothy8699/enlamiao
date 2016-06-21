@@ -11,79 +11,48 @@
 <div class="wrap"> 
 
 
-<!-- logo start -->
- <div style="width:100%;background:#183654;height:120px;">
-  <a href="/">
-    <div style="padding-left:40%;height:80px;line-height:80px;"><img src="image/logo01.svg" height="80px"></div>
-  </a>  
- </div>
-
-<!-- logo end --> 
+{include file="include/header.inc"}
 
 
-<div style="height:50px;line-height:50px;width:100%;margin:20px 10% 20px 10%;font-size:20px;">
+<div style="width:100%;margin:20px 10% 20px 10%;font-size:13px;">
 <form id="confirmForm" action="finish.html" method="post">
-    <table style="width:80%;border-collapse:separate; border-spacing:20px;border:1px solid #a8b9c0;">
-    <tr>
-      <td style="width:20%"><img src="image/step1.svg" width="200px"></td>
-
-      <td style="width:60%" class="createTableTr2Td2">
-      
-        <div style="height:50px;line-height:50px;width:100%">
-          {$title}
-          <input type="hidden" id="title" name="title" value="{$title}">
-        </div>
-      </td> 
-
-      <td style="width:20%">
-      
-      <td> 
-
-    </tr>
-
-    <tr>
-      <td style="width:20%"><img src="image/step3.svg" width="200px"></td>
-
-      <td style="width:80%" class="createTableTr2Td2">
-      
-        <div style="height:200px;line-height:200px;width:100%">
-          {$content}
-          <input type="hidden" id="content" name="content" value="{$content}">
-        </div>
-      </td>
-      
-    </tr>
-
-    <tr>
-      <td style="width:20%"><img src="image/step2.svg" width="200px"></td>
-
-       <td style="width:80%" class="createTableTr2Td2">
-       
-        {$datetimes}
-
-          <input type="hidden" id="datetimes" name="datetimes" value="{$datetimes}">
-        
-      </td>
-
-    </tr>
-
-
-    <tr>
-      <td>
-      </td> 
-      <td>
-      <div id="confirmBtn">
-        <div class="btn" style="display:block;"><img src="image/ok0.svg" width="300px"></div>
-        <div class="btn-hover" style="display:none;"><img src="image/ok3.svg" width="300px"></div>
+    <div style="padding:20px 10px;color:#565656;"> 
+      <div style="float:left;"><img src="image/no1.svg" height="80px"></div>
+      <div style="float:left;padding-left:20px;">
+        <div class="ttl">活动主题</div>
+        <div>{$title}</div>
       </div>
-      </td>
-      <td>
-      </td>
-    </tr>
+      <div style="clear:both;"></div>
+    </div>
 
+    <div style="padding:20px 10px;color:#565656;"> 
+    <div style="float:left"><img src="image/no2.svg" height="80px"></div>
+    <div style="float:left;padding-left:20px;">
+      <div class="ttl">活动内容</div>
+      <div>{$content|nl2br}</div>
+    </div>
+    <div style="clear:both;"></div>
+    </div>
+
+    <div style="padding:20px 10px;color:#565656;"> 
+    <div style="float:left"><img src="image/no3.svg" height="80px"></div>
+    <div style="float:left;padding-left:20px;">
+      <div class="ttl">候选时间</div>
+      <div>{$datetimes|nl2br}</div>
+    </div>
+    <div style="clear:both;"></div>
+    </div>
+
+    <input type="hidden" id="title" name="title" value="{$title}">
+    <input type="hidden" id="content" name="content" value="{$content}">
+    <input type="hidden" id="datetimes" name="datetimes" value="{$datetimes}">
+
+    <div id="confirmBtn" style="color:#565656;margin-left:100px;margin-top:30px;">
+      <p class="confirmBtn">
+        <span>嗯啦喵</span>
+      </p>
+    </div>
     </form>
-     
-    </table>
 </div>
 
 

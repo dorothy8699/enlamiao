@@ -11,19 +11,37 @@ $(document).ready(function(){
     });
 
     jQuery("#pollBtn").click(function(){
-        $("#pollForm").submit();
+        //$("#pollForm").submit();
+         $.ajax({
+             url: "poll",  
+             type: "POST",
+             data: $("#pollForm").serialize(),
+             async: false,
+             error: function(){  
+                 alert('Error loading XML document');  
+             },  
+             success: function(data,status){
+                 tb_remove();
+                 window.parent.location.reload();
+             }
+         });
+
     });
 
     jQuery(".yesBtn").click(function(){
         $(this).attr("src","image/clickedyes.svg");
-        var noBtn = $(this).parent().find('.noBtn');
+        $(this).next('.radioyes').attr("checked","checked");
+        var noBtn = $(this).closest('td').find('.noBtn');
         noBtn.attr("src","image/no.svg");
+        noBtn.next('.radiono').removeAttr("checked");
     });
 
     jQuery(".noBtn").click(function(){
         $(this).attr("src","image/clickedno.svg");
-        var yesBtn = $(this).parent().find('.yesBtn');
+        $(this).next('.radiono').attr("checked","checked");
+        var yesBtn = $(this).closest('td').find('.yesBtn');
         yesBtn.attr("src","image/yes.svg");
+        yesBtn.next('.radioyes').removeAttr("checked");
     });
 
     jQuery(".yesBtn").mouseenter(function(){
@@ -47,3 +65,18 @@ $(document).ready(function(){
     });
 
 });
+
+function tb_remove() {
+    var document = window.parent.document;
+    $("#TB_imageOff",window.parent.document).unbind("click");
+    $("#TB_closeWindowButton",window.parent.document).unbind("click");
+    $("#TB_window",window.parent.document).fadeOut("fast",function(){$('#TB_window,#TB_overlay,#TB_HideSelect',window.parent.document).trigger("unload").unbind().remove();});
+    $("#TB_load",window.parent.document).remove();
+    if (typeof window.parent.document.body.style.maxHeight == "undefined") {//if IE 6
+        $("body","html",window.parent.document).css({height: "auto", width: "auto"});
+        $("html",window.parent.document).css("overflow","");
+    }
+    window.parent.document.onkeydown = "";
+    window.parent.document.onkeyup = "";
+    return false;
+}

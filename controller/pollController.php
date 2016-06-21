@@ -7,11 +7,7 @@ require './core/MySmarty.class.php';
  * @author Dorothy <koueig@gmail.com> 2015-04-22
  */ 
 function init(){	
-
-	$smarty = new MySmarty();
-	$smarty->display('poll.tpl');
-
-	/*$username = $_POST['username'];
+	$username = $_POST['username'];
 	$eventid = $_POST['eventid'];
 	$pollArr = array();
 	foreach($_POST as $key=>$param){
@@ -38,10 +34,10 @@ function init(){
 		$stmt->execute();
 	}
 
-	$link = sprintf('http://%s/enlamiao/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
+	/*$link = sprintf('http://%s/enlamiao/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
 
 	header("Location: " . $link);*/
-
+	echo true;
 } 
 
 

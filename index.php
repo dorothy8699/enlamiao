@@ -15,8 +15,11 @@ else if(strpos($req_type, 'finish')){
 else if(strpos($req_type, 'list')){
 	require './controller/listController.php';
 }
-else if(strpos($req_type, 'poll')){
+else if(strpos($req_type, 'box')){
 	require './controller/boxController.php';
+}
+else if(strpos($req_type, 'poll')){
+	require './controller/pollController.php';
 }
 else{
 	require './controller/TopController.php';

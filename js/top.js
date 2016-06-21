@@ -1,9 +1,9 @@
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
     jQuery(".btn").mouseenter(function(){
     	jQuery(".btn").hide();
-    	$(".btn-hover").show();
+    	jQuery(".btn-hover").show();
     });
 
     jQuery(".btn-hover").mouseout(function(){
@@ -12,13 +12,14 @@ $(document).ready(function(){
     });
 
     jQuery("#okBtn").click(function(){
-    	$("#createForm").submit();
+    	jQuery("#createForm").submit();
     });
 
     jQuery("#confirmBtn").click(function(){
-        $("#confirmForm").submit();
+        jQuery("#confirmForm").submit();
     });
 
+    jQuery('.slider').slick();
     
 });
 

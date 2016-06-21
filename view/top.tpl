@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/top.js"></script>
+
      <link rel="stylesheet" href="css/top.css" >
+     <link rel="stylesheet" href="css/slick.css" >
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/top.js"></script>
 		<title></title>
 	</head>
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
 <div class="wrap"> 
 
-
-
-
+{include file="include/header.inc"}
 
 
 <div style="width:100%;position:relative;">
@@ -21,12 +22,19 @@
     <div style="font-size:50px;color:#FFF;padding-left:40%;height:80px;line-height:80px;">enlamiao</div>
  </div>
 <!-- logo end --> 
-<img src="image/bg1.svg" width="100%">
+
+<div class="slider">
+    <div><img src="image/bg/1.png" width="100%"></div>
+    <div><img src="image/bg/2.png" width="100%"></div>
+    <div><img src="image/bg/3.png" width="100%"></div>
+    <div><img src="image/bg/4.png" width="100%"></div>
+    <div><img src="image/bg/5.png" width="100%"></div>
+</div>
 </div>
 
 
 
-<div style="margin-top:-30px;padding-top:20px;width:100%;background:#183654;color:#e7f4f5;">
+<div style="margin-top:-10px;padding-top:20px;width:100%;background:#565656;color:#e7f4f5;">
 <div style="padding-top:50px;padding-left:10%;">
 
 <div class="circle" style="float:left;padding-right:50px;">
@@ -52,7 +60,7 @@
   
 </div>
 
-<div style="height:800px;background:#e7f4f5;padding:40px;">
+<div style="height:800px;background:#008080;padding:40px;">
 <div style="font-size:40px;text-align:center;padding:40px 40px 10px 40px;color:#183654;">Fantastice</div>
 <div style="font-size:12px;text-align:center;padding:10px;color:#183654;">What is a nice event!</div>
 <div style="height:400px;width:28%;border:2px solid #183654;float:left;"></div>

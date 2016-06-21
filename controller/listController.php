@@ -54,7 +54,7 @@ function init(){
     	$voteArr[$pid][] = array(
     		'uid'=>$uid,
     		'uname'=>$uname,
-    		'voteimg'=>$vote===1?"image/selectedyes.svg":"image/selectedno.svg",
+    		'voteimg'=>$vote===1?"image/clickedyes.svg":"image/clickedno.svg",
     	);
 
     	$userArr[$uname] = $uname;

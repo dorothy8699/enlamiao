@@ -11,23 +11,22 @@
  		          
               
 	
-	<div style="padding-top:20px;padding-bottom:20px;padding-left:10%;padding-right:10%;">
-	          <form id="pollForm" method="post" action="poll.html">
-
-	          <div>	
-              <div style="float:left"><img src="image/step1.svg" height="80px"></div>
-              <div style="float:left;height:80px;line-height:80px;padding-left:20px;">请输入姓名</div>
+	<div style="margin-top:30px;padding-top:20px;padding-bottom:20px;padding-left:10%;padding-right:10%;">
+	          <form id="pollForm" method="post">
+	            <div>	
+              <div style="float:left"><img src="image/step1.svg" height="20px"></div>
+              <div style="float:left;height:20px;line-height:20px;padding-left:20px;">请输入姓名</div>
               <div style="clear:both;"></div>
               </div>
 
               <div style="margin-top:10px;margin-left:70px;width:50%;">
-              <input type="text" name="username" id="username" placeholder="姓名或昵称" style="height:30px;">
+              <input type="text" name="username" id="username" placeholder="姓名或昵称" style="height:25px;">
               </div>
               
 
               <div style="margin-top:20px;">	
-              <div style="float:left"><img src="image/step2.svg" height="80px"></div>
-              <div style="float:left;height:80px;line-height:80px;padding-left:20px;">请选择日程	</div>
+              <div style="float:left"><img src="image/step2.svg" height="20px"></div>
+              <div style="float:left;height:20px;line-height:20px;padding-left:20px;">请选择日程	</div>
               <div style="clear:both;"></div>
               </div>
 
@@ -40,13 +39,19 @@
                    <td>
 	                   	
 	                   <div>
-		                   <div style="float:left"><img class="yesBtn" src="image/clickedyes.svg" height="30px" style="cursor:pointer"></div>
+		                   <div style="float:left">
+                       <img class="yesBtn" src="image/yes.svg" height="30px" style="cursor:pointer">
+                        <input type="radio" name="poll{$p.pid}" class="radioyes" value="1" style="display:none">
+                       </div>
 		                   <div style="float:left;height:30px;line-height:30px;padding-left:10px;">我要参加</div>
-		                   <div style="float:left;padding-left:20px;"><img class="noBtn" src="image/no.svg" height="30px" style="cursor:pointer"></div>
+		                   <div style="float:left;padding-left:20px;">
+                         <img class="noBtn" src="image/no.svg" height="30px" style="cursor:pointer">
+                         <input type="radio" name="poll{$p.pid}" class="radiono" value="2"  style="display:none">
+                       </div>
 		                   <div style="float:left;height:30px;line-height:30px;padding-left:10px;">下次么么哒</div>
 	                   </div> 
-	                   <input type="radio" name="poll{$p.pid}" value="1" style="display:none">
-	                    <input type="radio" name="poll{$p.pid}" value="2"  style="display:none">
+	                   
+	                   
 
 	                 
 	                </td>   
@@ -57,19 +62,25 @@
                 </table>
                </div>
 
-                <div style="margin-top:20px;">	
+              <!--<div style="margin-top:20px;">	
               <div style="float:left"><img src="image/step3.svg" height="80px"></div>
               <div style="float:left;height:80px;line-height:80px;padding-left:20px;">请点击确认	</div>
               <div style="clear:both;"></div>
               </div>
 
-               <div id="okBtn" style="margin-top:30px;margin-left:70px;">
+          <div id="okBtn" style="margin-top:30px;margin-left:70px;">
 		        <div class="btn" style="display:block;"><img src="image/ok0.svg" width="300px"></div>
 		        <div class="btn-hover" style="display:none;"><img src="image/ok3.svg" width="300px"></div>
-		      </div>
+		      </div>-->
+
+          <div style="margin-top:30px;margin-left:70px;">
+          <p id="pollBtn" class="pollBtn">
+                  <span>嗯啦喵</span>
+          </p>
+          </div>
                 
-              <input id="eventid" name="eventid" type="hidden" value="{$p.eid}">
-            </form>
+          <input id="eventid" name="eventid" type="hidden" value="{$p.eid}">
+          </form>
 
       </div>  
 	</body>

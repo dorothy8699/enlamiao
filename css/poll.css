@@ -2,9 +2,9 @@
 	margin-left: 10%;
 	margin-right:10%;
 	width: 80%;
-	color:#FFF;
+	color:#565656;
 	border-spacing:0px;
-	border:solid #a8b9c0;
+	border:solid #565656;
 	border-width:1px 0 0 1px;
 	/*-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #a8b9c0;*/
 
@@ -17,8 +17,16 @@
 	font-size:13px;
 	padding:5px 10px;
 	text-align: center;
-	border: solid #a8b9c0 ; 
+	border: solid #565656 ; 
 	border-width:0 1px 1px 0;
+}
+
+.pollBtn{
+	color:#5bc3b5;background-color: #565656;text-shadow: 0 -1px 0 rgba(0,0,0,1);display: table;font-size: 18px;height: 60px;margin: 0 0 15px;text-align: center;width: 50%;text-align:center;line-height:60px;cursor: pointer;
+}
+
+.pollBtn:hover{
+	color:#565656;background-color: #5bc3b5;border:2px solid #565656;text-shadow: 0;
 }
 
 

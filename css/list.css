@@ -10,9 +10,9 @@ body {
 .listTable{
 	color:#000;
 	border-spacing:0px;
-	border:solid #a8b9c0;
-	border-width:1px 0 0 1px;
-	-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #a8b9c0;
+	border:solid #565656;
+	border-width:2px 0 0 2px;
+	-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #565656;
 
 }
 .listTable tr{
@@ -23,14 +23,14 @@ body {
 	font-size:13px;
 	padding:5px 10px;
 	text-align: center;
-	border: solid #a8b9c0 ; 
-	border-width:0 1px 1px 0;
+	border: solid #565656; 
+	border-width:0 2px 2px 0;
 }
 
 .listTable tr:nth-child(1){
-	color:#f89f21;
+	color:#5bc3b5;
 	font-size:15px;
-	background: #183654;
+	background: #565656;
 }
 
 
@@ -67,16 +67,57 @@ body {
 /* thickbox */
 #TB_window{
 	border:0;
-	background: #656263;
+	background: #FFF;
 }
 
 #TB_title{
-	background: #fbbf58;
-	color:#FFF;
+	background: #565656;
+	color:#565656;
 	text-align:center;
 	height: 50px;
 }
 
 #TB_ajaxWindowTitle{
 	text-align:center;
+}
+
+/* basic style */
+.close {
+    background: #5bc3b5;
+    color: #565656;
+    border-radius: 25px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    padding: 1px;
+    -webkit-transition:0.4s ease-in; 
+	transition:0.4s ease-in;
+	cursor: pointer;
+}
+
+.close:hover{
+    background: #565656;
+    color: #5bc3b5;
+    -webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+/* use cross as close button */
+.close::before {
+    content: "\2716";
+}
+/* place the button on top-right */
+.close {
+    top: -20px;
+    right: -20px;
+    position: absolute;
+}
+
+.okBtn{
+	color:#5bc3b5;background-color: #565656;text-shadow: 0 -1px 0 rgba(0,0,0,1);display: table;font-size: 18px;height: 60px;margin: 0 0 15px;text-align: center;width: 50%;text-align:center;line-height:60px;cursor: pointer;
+}
+.okBtn:hover{
+	color:#565656;background-color: #5bc3b5;border:2px solid #565656;
 }
