@@ -1,0 +1,11 @@
+body {
+    color: #505050;
+    line-height: 1.75em;
+    position: relative;
+    /*font-family: Consolas,Monaco,Lucida Console,monospace;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;*/
+    font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+    background-color: #dae3e7;
+    text-shadow: 0 -1px 0 rgba(0,0,0,1);
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/poll.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/poll.js"></script>

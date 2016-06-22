@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/top.css" >
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/top.js"></script>

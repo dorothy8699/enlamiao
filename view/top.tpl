@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+     <link rel="stylesheet" href="css/comm.css" >
      <link rel="stylesheet" href="css/top.css" >
      <link rel="stylesheet" href="css/slick.css" >
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -12,18 +12,12 @@
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
 <div class="wrap"> 
 
-{include file="include/header.inc"}
 
 
+
+<!--
 <div style="width:100%;position:relative;">
-<!-- logo start -->
- <div style="width:100%;background:#183654;position:absolute;top:0;display:none;">
-    <div style="padding-left:30%;float:left;"><img src="image/logo8.svg" height="80px"></div>
-    <div style="font-size:50px;color:#FFF;padding-left:40%;height:80px;line-height:80px;">enlamiao</div>
- </div>
-<!-- logo end --> 
-
-<div class="slider">
+<div class="slider" style="padding-left:10%;padding-right:10%;">
     <div><img src="image/bg/1.png" width="100%"></div>
     <div><img src="image/bg/2.png" width="100%"></div>
     <div><img src="image/bg/3.png" width="100%"></div>
@@ -31,9 +25,42 @@
     <div><img src="image/bg/5.png" width="100%"></div>
 </div>
 </div>
+-->
 
 
 
+<div style="width:100%;background:#565656;text-align:center;padding-top:60px;height:100vh;">
+
+ <div style="width:100%;background:#565656;height:30%;">
+  <a href="/enlamiao">
+     <embed src="image/logo01.svg" width="50%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+  </a>  
+ </div>
+
+<div style="height:40%;color:#FFFFFF;">
+<div style="font-size:26px;padding-top:60px;font-weight:bold;">嗯啦喵是一款个人意愿收集小工具</div>
+<div style="margin:20px 25% 20px 25%;border-bottom: 1px dashed #FFFFFF;"></div>
+<div style="font-size:15px;padding-top:40px;">您只需一键发布活动计划</div>
+<div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您收集活动参加者意愿</div>
+<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>
+<div style="font-size:15px;padding-top:10px;">用最少的时间做最有意义的事</div>
+</div>
+
+<div style="height:30%;">
+
+
+<a href="create.html">
+  <div class="btn" style="display:block;"><img src="image/start.svg" width="300px"></div>
+  <div class="btn-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
+</a>
+</div>
+
+</div>
+
+
+
+<!--
 <div style="margin-top:-10px;padding-top:20px;width:100%;background:#565656;color:#e7f4f5;">
 <div style="padding-top:50px;padding-left:10%;">
 
@@ -75,7 +102,7 @@
 
 </div>
 
-
+-->
 
 
 <!-- footer start-->
