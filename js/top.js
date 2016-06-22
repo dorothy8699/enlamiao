@@ -1,14 +1,12 @@
 
 jQuery(document).ready(function(){
 
-    jQuery(".btn").mouseenter(function(){
-    	jQuery(".btn").hide();
-    	jQuery(".btn-hover").show();
+    jQuery("#startBtn").mouseenter(function(){
+    	jQuery("#startBtn").removeClass('color-bg-r').addClass('color-bg-b');
     });
 
-    jQuery(".btn-hover").mouseout(function(){
-    	jQuery(".btn").show();
-    	jQuery(".btn-hover").hide();
+    jQuery("#startBtn").mouseout(function(){
+    	jQuery("#startBtn").removeClass('color-bg-b').addClass('color-bg-r');
     });
 
     jQuery("#okBtn").click(function(){

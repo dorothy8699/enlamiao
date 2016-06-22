@@ -9,3 +9,28 @@ body {
     background-color: #dae3e7;
     text-shadow: 0 -1px 0 rgba(0,0,0,1);
 }
+
+a{text-decoration: none;}
+
+.font-en {font-family: 'Changa One', cursive;}
+.font-logo {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}
+
+.ft11{font-size:11px;}
+
+.ft13{font-size: 13px;}
+
+.ft15{font-size: 15px;}
+
+.ft18{font-size: 18px;}
+
+.ft20{font-size: 20px;}
+
+.ft36{font-size: 36px;}
+
+.pointer{cursor: pointer;}
+
+.color-w { color:#FFF; }
+.color-b { color:#5bc3b5; }
+.color-r { color:#de5233; }
+.color-bg-r { background:#de5233; }
+.color-bg-b { background:#5bc3b5; }

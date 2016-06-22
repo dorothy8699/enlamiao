@@ -4,6 +4,8 @@
      <link rel="stylesheet" href="css/comm.css" >
      <link rel="stylesheet" href="css/top.css" >
      <link rel="stylesheet" href="css/slick.css" >
+     <link href='https://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
+     <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
     <script type="text/javascript" src="js/top.js"></script>
@@ -11,8 +13,6 @@
 	</head>
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
 <div class="wrap"> 
-
-
 
 
 <!--
@@ -31,29 +31,43 @@
 
 <div style="width:100%;background:#565656;text-align:center;padding-top:60px;height:100vh;">
 
- <div style="width:100%;background:#565656;height:30%;">
+<!-- logo start-->
+ <div style="height:20%;line-height:20%;width:100%;background:#565656;">
   <a href="/enlamiao">
-     <embed src="image/logo01.svg" width="50%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-
+     <embed src="image/fabicon.svg" width="40%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
+     <!--<span style="font-size:36px;color:#de5233;" class="font-en">ENLAMIAO</span>-->
   </a>  
  </div>
+<!-- logo end--> 
 
-<div style="height:40%;color:#FFFFFF;">
-<div style="font-size:26px;padding-top:60px;font-weight:bold;">嗯啦喵是一款个人意愿收集小工具</div>
-<div style="margin:20px 25% 20px 25%;border-bottom: 1px dashed #FFFFFF;"></div>
-<div style="font-size:15px;padding-top:40px;">您只需一键发布活动计划</div>
-<div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您收集活动参加者意愿</div>
-<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>
-<div style="font-size:15px;padding-top:10px;">用最少的时间做最有意义的事</div>
+<!-- about enlamiao start-->
+<div style="height:45%;color:#FFFFFF;">
+<div style="font-size:26px;padding-top:60px;font-weight:bold;">嗯啦喵是一款收集团队活动参与意向的小工具</div>
+<div style="margin:20px 20% 20px 20%;"><embed src="image/line.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
+<div style="font-size:15px;padding-top:10px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+<div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+<!--<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>-->
+<div style="font-size:15px;padding-top:10px;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
 </div>
+<!-- about enlamiao end-->
 
-<div style="height:30%;">
 
 
-<a href="create.html">
-  <div class="btn" style="display:block;"><img src="image/start.svg" width="300px"></div>
-  <div class="btn-hover" style="display:none;"><img src="image/starth.svg" width="300px"></div>
-</a>
+<!-- botton start -->
+<div style="height:35%;width:100%;margin-top:20px;padding-left:40%;width:20%;">
+  <a href="create.html">
+  <div id="startBtn" style="height:60px;line-height:60px;border-radius:60px;width:100%;text-align:center;padding-bottom:5px;" class="font-en ft36 color-w color-bg-r pointer">
+    start
+  </div>
+  </a>
+  <div class="arrow">
+    <a href="#"><span></span></a>
+  </div>
+</div>
+<!-- botton end -->
+
+
+
 </div>
 
 </div>
