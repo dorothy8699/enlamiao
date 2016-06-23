@@ -14,54 +14,76 @@
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
 <div class="wrap"> 
 
-
 <!--
-<div style="width:100%;position:relative;">
-<div class="slider" style="padding-left:10%;padding-right:10%;">
-    <div><img src="image/bg/1.png" width="100%"></div>
-    <div><img src="image/bg/2.png" width="100%"></div>
-    <div><img src="image/bg/3.png" width="100%"></div>
-    <div><img src="image/bg/4.png" width="100%"></div>
-    <div><img src="image/bg/5.png" width="100%"></div>
-</div>
-</div>
--->
+<div style="width:100%;background:#565656;text-align:center;height:100vh;position:relative;">
+  <div style="width:100%;height:80%;padding-top:1%;">
+    <a href="/enlamiao">
+     <embed src="image/fabicon.svg" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
+  </a> 
+  </div>
+
+  <div style="width:20%;height:10%;margin-top:-8px;margin-left:40%;margin-right:40%;">
+    <a href="create.html">
+    <div id="startBtn" style="height:60px;line-height:60px;border-radius:60px;width:100%;min-width:100px;text-align:center;padding-top:5px;padding-bottom:5px;" class="font-en ft36 color-w color-bg-r pointer">
+      start
+    </div>
+    </a>
+  </div>
+
+  <div class="arrow">
+    <a href="#"><span></span></a>
+  </div>
+
+  <div style="position:absolute;top:20%;left:20%;width:60%;">
+    <div style="width:100%;height:50%;color:#FFFFFF;">
+      <div style="font-size:26px;padding-top:10%;font-weight:bold;">嗯啦喵是一款收集团队活动参与意向的小工具</div>
+       <div style="width:100%;"><embed width="100%" src="image/line.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
+      <div style="font-size:15px;padding-top:2%;">您只需一键<span class="color-r">发布</span>活动计划</div>
+      <div style="font-size:15px;padding-top:2%;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+      <div style="font-size:15px;padding-top:2%;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
+    </div>
+  </div>
+
+</div>-->
 
 
 
 <div style="width:100%;background:#565656;text-align:center;padding-top:60px;height:100vh;">
 
 <!-- logo start-->
- <div style="height:20%;line-height:20%;width:100%;background:#565656;">
+ <div style="height:25%;width:100%;background:#565656;">
   <a href="/enlamiao">
      <embed src="image/fabicon.svg" width="40%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
-     <!--<span style="font-size:36px;color:#de5233;" class="font-en">ENLAMIAO</span>-->
   </a>  
  </div>
 <!-- logo end--> 
 
 <!-- about enlamiao start-->
-<div style="height:45%;color:#FFFFFF;">
-<div style="font-size:26px;padding-top:60px;font-weight:bold;">嗯啦喵是一款收集团队活动参与意向的小工具</div>
-<div style="margin:20px 20% 20px 20%;"><embed src="image/line.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
-<div style="font-size:15px;padding-top:10px;">您只需一键<span class="color-r">发布</span>活动计划</div>
-<div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
-<!--<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>-->
-<div style="font-size:15px;padding-top:10px;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
+<div style="width:100%;height:35%;color:#FFFFFF;">
+  <div style="width:100%;height:100%;">
+    <div style="font-size:26px;font-weight:bold;">嗯啦喵是一款收集团队活动参与意向的小工具</div>
+
+    <div style="margin:0px 20% 20px 20%;"><embed src="image/line.svg" width="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
+
+    <div style="font-size:15px;padding-top:10px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+    <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+    <!--<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>-->
+    <div style="font-size:15px;padding-top:10px;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
+   </div> 
 </div>
 <!-- about enlamiao end-->
 
 
 
 <!-- botton start -->
-<div style="height:35%;width:100%;margin-top:20px;padding-left:40%;width:20%;">
+<div style="height:35%;width:100%;margin-top:50px;padding-left:40%;width:20%;">
   <a href="create.html">
-  <div id="startBtn" style="height:60px;line-height:60px;border-radius:60px;width:100%;text-align:center;padding-bottom:5px;" class="font-en ft36 color-w color-bg-r pointer">
+  <div id="startBtn" style="height:60px;line-height:60px;border-radius:60px;width:100%;text-align:center;padding-bottom:5px;min-width:100px;" class="font-en ft36 color-w color-bg-r pointer">
     start
   </div>
   </a>
   <div class="arrow">
-    <a href="#"><span></span></a>
+    <a href="#how"><span></span></a>
   </div>
 </div>
 <!-- botton end -->
@@ -70,6 +92,9 @@
 
 </div>
 
+
+<div style="width:100%;background:#FFF;text-align:center;padding-top:60px;height:100vh;" id="how">
+How to use?
 </div>
 
 
@@ -117,13 +142,12 @@
 </div>
 
 -->
-
-
 <!-- footer start-->
-<div style="height:400px;background:#183654;color:#FFF;text-align:center;padding-top:30px;">
-Copyright © 2016 enlamiao All Rights Reserved.
-</div>
+{include file="include/footer.inc"}
 <!-- footer end-->
+
+
+
 
 
 

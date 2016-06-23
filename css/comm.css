@@ -7,7 +7,7 @@ body {
     font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;*/
     font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
     background-color: #dae3e7;
-    text-shadow: 0 -1px 0 rgba(0,0,0,1);
+    /*text-shadow: 0 -4px 0 rgba(0,0,0,1);*/
 }
 
 a{text-decoration: none;}
@@ -34,3 +34,11 @@ a{text-decoration: none;}
 .color-r { color:#de5233; }
 .color-bg-r { background:#de5233; }
 .color-bg-b { background:#5bc3b5; }
+
+
+.okBtn{
+	color:#5bc3b5;background-color: #565656;text-shadow: 0 -1px 0 rgba(0,0,0,1);display: table;font-size: 18px;height: 60px;margin: 0 0 15px;text-align: center;width: 50%;text-align:center;line-height:60px;cursor: pointer;
+}
+.okBtn:hover{
+	color:#565656;background-color: #5bc3b5;border:2px solid #565656;
+}

@@ -1,0 +1,10 @@
+.title-up{
+	font-size:18px;color:#000;
+}
+.title-down{
+	font-size:13px;color:#aeaeae;line-height: 120%;
+}
+
+.title,.content,.datetimes{
+	border: 1px solid #f3f3f3;
+}

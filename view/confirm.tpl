@@ -56,6 +56,9 @@
     </form>
 </div>
 
+<!-- footer start-->
+{include file="include/header.inc"}
+<!-- footer end-->
 
 </div>
 	</body>

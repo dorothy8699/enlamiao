@@ -27,6 +27,9 @@
 <a href="{$link}" target="_blank">{$link}</a>
 </div>
 
+<!-- footer start-->
+{include file="include/header.inc"}
+<!-- footer end-->
 
 </div>
 	</body>

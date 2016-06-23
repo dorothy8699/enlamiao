@@ -1,5 +1,4 @@
 
-
 .listTable{
 	color:#000;
 	border-spacing:0px;
@@ -108,9 +107,3 @@
     position: absolute;
 }
 
-.okBtn{
-	color:#5bc3b5;background-color: #565656;text-shadow: 0 -1px 0 rgba(0,0,0,1);display: table;font-size: 18px;height: 60px;margin: 0 0 15px;text-align: center;width: 50%;text-align:center;line-height:60px;cursor: pointer;
-}
-.okBtn:hover{
-	color:#565656;background-color: #5bc3b5;border:2px solid #565656;
-}
