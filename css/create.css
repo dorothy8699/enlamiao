@@ -1,10 +1,46 @@
 .title-up{
-	font-size:18px;color:#000;
+	font-size:18px;color:#565656;font-weight: bolder;
 }
 .title-down{
-	font-size:13px;color:#aeaeae;line-height: 120%;
+	font-size:13px;line-height: 120%;
+}
+.title-step{
+	font-size:18px;font-weight: bold;
 }
 
 .title,.content,.datetimes{
-	border: 1px solid #f3f3f3;
+	border: 2px solid #5bc3b5;
+}
+
+.title:focus,.content:focus,.datetimes:focus{
+	border: 2px solid #008080;
+}
+
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+	background: #008080;
+    box-shadow: #565656 0px 1px 3px 0px inset;
+    color: #fff;
+    font-weight: 700;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div:hover{
+	color: #565656 !important;
+    background: #5bc3b5 !important;
+    box-shadow: none !important;
+}
+
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_today,.xdsoft_current{
+	background-color: #de5233;
+	color:#FFF;
+}
+
+.createBtn{
+    border-radius:60px;width:100%;text-align:center;padding-bottom:5px;background:#565656;
+}
+
+.createBtn:hover{
+    background:#de5233;color:#FFF;
 }

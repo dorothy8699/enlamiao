@@ -40,7 +40,7 @@
        <div style="width:100%;"><embed width="100%" src="image/line.svg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
       <div style="font-size:15px;padding-top:2%;">您只需一键<span class="color-r">发布</span>活动计划</div>
       <div style="font-size:15px;padding-top:2%;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
-      <div style="font-size:15px;padding-top:2%;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
+      <div style="font-size:15px;padding-top:2%;">提升团队建设<span class="color-b">效率</span></div>
     </div>
   </div>
 
@@ -61,14 +61,14 @@
 <!-- about enlamiao start-->
 <div style="width:100%;height:35%;color:#FFFFFF;">
   <div style="width:100%;height:100%;">
-    <div style="font-size:26px;font-weight:bold;">嗯啦喵是一款收集团队活动参与意向的小工具</div>
+    <div style="font-size:36px;font-weight:bold;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
 
-    <div style="margin:0px 20% 20px 20%;"><embed src="image/line.svg" width="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>
+    <!--<div style="margin:0px 20% 20px 20%;"><embed src="image/line.svg" width="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>-->
 
-    <div style="font-size:15px;padding-top:10px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+    <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
     <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
-    <!--<div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>-->
-    <div style="font-size:15px;padding-top:10px;">用最少的时间做最<span class="color-b">有意义</span>的事</div>
+    <div style="font-size:15px;padding-top:10px;">有效提高团队建设工作效率</div>
+    <!--<div style="font-size:15px;padding-top:10px;">用最少的时间做最<span class="color-b">有意义</span>的事</div>-->
    </div> 
 </div>
 <!-- about enlamiao end-->
@@ -78,7 +78,7 @@
 <!-- botton start -->
 <div style="height:35%;width:100%;margin-top:50px;padding-left:40%;width:20%;">
   <a href="create.html">
-  <div id="startBtn" style="height:60px;line-height:60px;border-radius:60px;width:100%;text-align:center;padding-bottom:5px;min-width:100px;" class="font-en ft36 color-w color-bg-r pointer">
+  <div id="startBtn" style="height:80px;line-height:80px;min-width:100px;" class="font-en ft36 color-w pointer okBtn">
     start
   </div>
   </a>
@@ -94,7 +94,9 @@
 
 
 <div style="width:100%;background:#FFF;text-align:center;padding-top:60px;height:100vh;" id="how">
-How to use?
+<div class="circle" style="float:left;padding-right:50px;">
+<img src="image/agree.svg">
+</div>
 </div>
 
 
