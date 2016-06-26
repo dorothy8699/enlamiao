@@ -5,8 +5,9 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
     <link href='https://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/create.css" >
+    <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/top.js"></script>
+    <script type="text/javascript" src="js/create.js"></script>
     
     
 		<title></title>
@@ -19,9 +20,10 @@
 
 {include file="include/header.inc"}
 
-<div style="width:60%;margin:20px 20% 20px 20%;background:#5bc3b5;color:#565656;padding:2%;border-radius:20px;-moz-box-shadow:7px 7px 16px #a8b9c0; -webkit-box-shadow:7px 7px 16px #a8b9c0; box-shadow:7px 7px 16px #a8b9c0;">
+<div style="width:100%;">
+<div style="width:70%;margin:0 15% 0 15%;color:#565656;padding:2%;/*border-radius:20px;-moz-box-shadow:7px 7px 30px #008080; -webkit-box-shadow:7px 7px 16px #008080; box-shadow:7px 7px 16px #008080;*/">
 
-    
+    <form id="createForm" action="confirm.html" method="post">
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
              <img src="image/no1.svg" height="80px">
@@ -71,22 +73,20 @@
                     
                
                   <div style="width:100%;">  
-                    <div style="padding-top:5px;position:relative;">
+                    <div style="padding-top:5px;">
 
-                    <div style="height:250px;background:#FFF;">
-
+                    <!--<div style="height:250px;background:#FFF;position:relative;">
+                        <div class="circle" style="position:absolute;right:5px;bottom:0;cursor:pointer;opacity:0.7;"><img src="image/calendar.svg"></div>
+                    </div>-->
+                    <div style="float:left;width:50%;">
+                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;" rows="17"></textarea>
                     </div>
-                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;display:none;" rows="25"></textarea>
-
-
-                    <!--
-                    
   
-                     <div style="position:absolute;top:10px;right:0;">
+                     <div style="float:left;margin-left:10px;">
                       <input type="text" id="datetimepicker" style="display: none;">
                       </div> 
                     </div>
-                    -->
+                    
 
 
 
@@ -115,8 +115,10 @@
             <div id="createBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer createBtn">
               OK
             </div>
-          </div>
-          </div>
+            </div>
+    </form>      
+</div>
+</div>
 
 
 

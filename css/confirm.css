@@ -1,0 +1,13 @@
+.confirmBtn{
+    border-radius:60px;width:100%;text-align:center;padding-bottom:5px;background:#565656;
+}
+
+.confirmBtn:hover{
+    background:#de5233;color:#FFF;
+}
+.title-up{
+	font-size:18px;color:#565656;font-weight: bolder;
+}
+.title-down{
+	font-size:13px;line-height: 120%;
+}

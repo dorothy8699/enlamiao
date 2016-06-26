@@ -107,8 +107,8 @@
          style="stop-opacity:1;stop-color:#7ec200" /></linearGradient></defs><g
      id="g8278"
      transform="translate(-83.221315,-67.63939)"
-     style="stroke:#c35b69;stroke-opacity:1"><g
-       style="fill:#ffffff;fill-opacity:1;stroke:#c35b69;stroke-opacity:1"
+     style="stroke:#de5233;stroke-opacity:1"><g
+       style="fill:#ffffff;fill-opacity:1;stroke:#de5233;stroke-opacity:1"
        transform="translate(-68.548293,-11.276721)"
        id="g8254"><path
          d="m 151.95222,83.786051 a 4.8606186,4.86061 0 0 1 5.01095,-4.667595 4.8606186,4.86061 0 0 1 4.70512,4.975735 4.8606186,4.86061 0 0 1 -4.94025,4.742367 4.8606186,4.86061 0 0 1 -4.77936,-4.904471"
@@ -121,8 +121,8 @@
          sodipodi:cx="156.8091"
          sodipodi:type="arc"
          id="path5304"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c35b69;stroke-width:0.35773283;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><path
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#c35b69;stroke-width:0.32600001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#de5233;stroke-width:0.35773283;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#de5233;stroke-width:0.32600001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 155.09961,80.557602 c -0.11295,-0.01373 -0.22367,0.01444 -0.30339,0.09084 l -1.22626,1.177213 c -0.15945,0.152791 -0.1377,0.431885 0.049,0.626756 l 1.46243,1.5242 -1.46243,1.526015 c -0.18675,0.19487 -0.20849,0.47397 -0.049,0.626756 l 1.22626,1.17539 c 0.15944,0.15279 0.43819,0.11857 0.62494,-0.0763 l 1.38795,-1.447896 1.38795,1.447896 c 0.18674,0.19487 0.4655,0.2291 0.62493,0.0763 l 1.22627,-1.17539 c 0.15944,-0.152786 0.1377,-0.431886 -0.049,-0.626756 l -1.46244,-1.526015 1.46244,-1.5242 c 0.18674,-0.194871 0.20849,-0.473965 0.049,-0.626756 l -1.22627,-1.177213 c -0.15943,-0.152792 -0.43819,-0.118571 -0.62493,0.0763 l -1.38795,1.447899 -1.38795,-1.447899 c -0.0934,-0.09744 -0.20861,-0.153407 -0.32155,-0.167136 z"
          id="path5306"
          inkscape:connector-curvature="0" /></g></g></svg>

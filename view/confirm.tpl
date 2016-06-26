@@ -2,7 +2,8 @@
 <html>
 	<head>
     <link rel="stylesheet" href="css/comm.css" >
-    <link rel="stylesheet" href="css/top.css" >
+    <link rel="stylesheet" href="css/confirm.css" >
+    <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/top.js"></script>
     
@@ -14,50 +15,76 @@
 
 {include file="include/header.inc"}
 
+<div style="width:100%;">
+<div style="width:70%;margin:0 15% 0 15%;color:#565656;padding:2%;/*border-radius:20px;-moz-box-shadow:7px 7px 30px #008080; -webkit-box-shadow:7px 7px 16px #008080; box-shadow:7px 7px 16px #008080;*/">
 
-<div style="width:100%;margin:20px 10% 20px 10%;font-size:13px;">
-<form id="confirmForm" action="finish.html" method="post">
-    <div style="padding:20px 10px;color:#565656;"> 
-      <div style="float:left;"><img src="image/no1.svg" height="80px"></div>
-      <div style="float:left;padding-left:20px;">
-        <div class="ttl">活动主题</div>
-        <div>{$title}</div>
-      </div>
-      <div style="clear:both;"></div>
-    </div>
+    <form id="confirmForm" action="finish.html" method="post">
+          <div style="padding:15px 10px;">
+            <div style="float:left;" class="title-step">
+             <img src="image/no1.svg" height="80px">
 
-    <div style="padding:20px 10px;color:#565656;"> 
-    <div style="float:left"><img src="image/no2.svg" height="80px"></div>
-    <div style="float:left;padding-left:20px;">
-      <div class="ttl">活动内容</div>
-      <div>{$content|nl2br}</div>
-    </div>
-    <div style="clear:both;"></div>
-    </div>
+            </div>
 
-    <div style="padding:20px 10px;color:#565656;"> 
-    <div style="float:left"><img src="image/no3.svg" height="80px"></div>
-    <div style="float:left;padding-left:20px;">
-      <div class="ttl">候选时间</div>
-      <div>{$datetimes|nl2br}</div>
-    </div>
-    <div style="clear:both;"></div>
-    </div>
+            <div style="float:left;padding-left:20px;width:80%;">
+              <div class="title-up">活动主题</div>
+              <div style="padding-top:5px;" class="title-down">
+                {$title}
+              </div>
+            </div>
 
-    <input type="hidden" id="title" name="title" value="{$title}">
-    <input type="hidden" id="content" name="content" value="{$content}">
-    <input type="hidden" id="datetimes" name="datetimes" value="{$datetimes}">
+            <div style="clear:both;"></div>
+          </div>
+          <div style="padding:15px 10px;">
+            <div style="float:left;" class="title-step">
+             <img src="image/no2.svg" height="80px">
+            </div>
 
-    <div id="confirmBtn" style="color:#565656;margin-left:100px;margin-top:30px;">
-      <p class="confirmBtn">
-        <span>嗯啦喵</span>
-      </p>
-    </div>
-    </form>
+            <div style="float:left;padding-left:20px;width:80%;">
+              <div class="title-up">活动详细</div>
+              <div style="padding-top:5px;" class="title-down">
+                {$content}
+              </div>
+            </div>
+            <div style="clear:both;"></div>
+          </div>
+          
+
+          <div style="padding:15px 10px;">
+            <div style="float:left;" class="title-step">
+             <img src="image/no3.svg" height="80px">
+            </div>
+
+            <div style="float:left;padding-left:20px;width:80%;">
+                <div style="width:100%;">
+                  
+                  <div class="title-up">候选时间</div>
+                  <div style="width:100%;">  
+                    <div style="padding-top:5px;" class="title-down">
+                        {$datetimes|nl2br}
+                    </div>
+
+                </div>  
+              </div>
+
+            </div>
+
+            <div style="clear:both;"></div>  
+
+             <input type="hidden" id="title" name="title" value="{$title}">
+            <input type="hidden" id="content" name="content" value="{$content}">
+            <input type="hidden" id="datetimes" name="datetimes" value="{$datetimes}">
+
+            <div style="width:100%;padding-top:60px;padding-left:40%;width:20%;">
+            <div id="confirmBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer confirmBtn">
+              OK
+            </div>
+            </div>
+    </form>      
+</div>
 </div>
 
 <!-- footer start-->
-{include file="include/header.inc"}
+{include file="include/footer.inc"}
 <!-- footer end-->
 
 </div>

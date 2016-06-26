@@ -16,7 +16,7 @@
 	          <form id="pollForm" method="post">
 	            <div>	
               <div style="float:left"><img src="image/step1.svg" height="20px"></div>
-              <div style="float:left;height:20px;line-height:20px;padding-left:20px;">请输入姓名</div>
+              <div style="float:left;height:20px;line-height:20px;padding-left:20px;" class="title-up">请输入姓名</div>
               <div style="clear:both;"></div>
               </div>
 
@@ -27,7 +27,7 @@
 
               <div style="margin-top:20px;">	
               <div style="float:left"><img src="image/step2.svg" height="20px"></div>
-              <div style="float:left;height:20px;line-height:20px;padding-left:20px;">请选择日程	</div>
+              <div style="float:left;height:20px;line-height:20px;padding-left:20px;" class="title-up">请选择日程	</div>
               <div style="clear:both;"></div>
               </div>
 

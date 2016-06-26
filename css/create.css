@@ -8,14 +8,14 @@
 	font-size:18px;font-weight: bold;
 }
 
-.title,.content,.datetimes{
+/*.title,.content,.datetimes{
 	border: 2px solid #5bc3b5;
 }
 
 .title:focus,.content:focus,.datetimes:focus{
 	border: 2px solid #008080;
 }
-
+*/
 
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
 	background: #008080;
@@ -43,4 +43,10 @@
 
 .createBtn:hover{
     background:#de5233;color:#FFF;
+}
+
+.circle img{
+	width: 50px;
+	-webkit-border-radius: 50px;
+	border-radius:50px;
 }
