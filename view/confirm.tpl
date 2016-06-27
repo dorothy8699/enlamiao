@@ -21,7 +21,7 @@
     <form id="confirmForm" action="finish.html" method="post">
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no1.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
 
             </div>
 
@@ -36,7 +36,7 @@
           </div>
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no2.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
@@ -51,7 +51,7 @@
 
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no3.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">

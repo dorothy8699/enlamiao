@@ -48,12 +48,12 @@
 
 
 
-<div style="width:100%;background:#565656;text-align:center;padding-top:60px;height:100vh;">
+<div style="width:100%;background:#565656;text-align:center;padding-top:2%;height:100vh;">
 
 <!-- logo start-->
  <div style="height:25%;width:100%;background:#565656;">
   <a href="/enlamiao">
-     <embed src="image/fabicon.svg" width="40%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
+     <embed src="image/fabicon.svg" width="45%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
   </a>  
  </div>
 <!-- logo end--> 
@@ -61,7 +61,7 @@
 <!-- about enlamiao start-->
 <div style="width:100%;height:35%;color:#FFFFFF;">
   <div style="width:100%;height:100%;">
-    <div style="font-size:36px;font-weight:bold;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+    <div style="font-size:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
 
     <!--<div style="margin:0px 20% 20px 20%;"><embed src="image/line.svg" width="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /></div>-->
 
@@ -76,9 +76,9 @@
 
 
 <!-- botton start -->
-<div style="height:35%;width:100%;margin-top:50px;padding-left:40%;width:20%;">
+<div style="height:35%;width:100%;margin-top:8%;padding-left:40%;width:20%;">
   <a href="create.html">
-  <div id="startBtn" style="height:80px;line-height:80px;min-width:100px;" class="font-en ft36 color-w pointer okBtn">
+  <div id="startBtn" style="height:70px;line-height:70px;min-width:100px;" class="font-en ft36 color-w pointer startBtn">
     start
   </div>
   </a>

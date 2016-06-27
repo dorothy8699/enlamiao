@@ -47,3 +47,17 @@ $(document).ready(function(){
     });
 
 });
+
+function openBox(eid){
+    var w = 900,h = 500;
+    if (window.innerWidth)
+        w = window.innerWidth * 0.65;
+    else if ((document.body) && (document.body.clientWidth))
+        w = document.body.clientWidth * 0.65;
+    if (window.innerHeight)
+        h = window.innerHeight * 0.8;
+    else if ((document.body) && (document.body.clientHeight))
+        h = document.body.clientHeight * 0.8;
+    var url = "box?id=" + eid + "&keepThis=true&TB_iframe=true&height=" + h + "&width=" + w;
+    tb_show(null,url);
+}

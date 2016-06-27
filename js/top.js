@@ -1,7 +1,6 @@
 
 jQuery(document).ready(function(){
 
-
     jQuery("#okBtn").click(function(){
     	jQuery("#createForm").submit();
     });

@@ -26,16 +26,27 @@
     <form id="createForm" action="confirm.html" method="post">
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no1.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
 
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
+              <!-- error message start -->
+              <div id="title-error-area" class="error-area">
+                <div style="height:30px;line-height:30px;float:left;">
+                      <img src="image/warning.svg" height="20px" class="pdt5">
+                </div>
+                <div id="title-error-msg" class="error-msg">
+                  请输入活动主题
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <!-- error message end -->
+
               <div class="title-up">请输入活动主题</div>
               <div class="title-down">团队建设、聚餐卡拉OK、旅行、登山、足球、游戏等</div>
               <div style="padding-top:5px;">
                 <input type="text" id="title" class="title" name="title" style="height:30px;width:100%;">
-                
               </div>
             </div>
 
@@ -43,10 +54,23 @@
           </div>
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no2.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
+              <!-- error message start -->
+              <div id="content-error-area" class="error-area">
+                <div style="height:30px;line-height:30px;float:left;">
+                      <img src="image/warning.svg" height="20px" class="pdt5">
+                </div>
+                <div id="content-error-msg" class="error-msg">
+                  请输入活动详细
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <!-- error message end -->
+
+
               <div class="title-up">请输入活动详细</div>
               <div class="title-down">地点、参加者、费用等</div>
               <div style="padding-top:5px;">
@@ -60,10 +84,21 @@
 
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no3.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
+                <!-- error message start -->
+              <div id="time-error-area" class="error-area">
+                <div style="height:30px;line-height:30px;float:left;">
+                      <img src="image/warning.svg" height="20px" class="pdt5">
+                </div>
+                <div id="time-error-msg" class="error-msg">
+                  请选择活动候补时间
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <!-- error message end -->
                 <div style="width:100%;">
                   
                     <div class="title-up">请从日历中选择候补时间</div>

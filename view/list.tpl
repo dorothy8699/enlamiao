@@ -22,7 +22,7 @@
 
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no1.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
 
             </div>
 
@@ -37,7 +37,7 @@
           </div>
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no2.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
@@ -52,7 +52,7 @@
 
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
-             <img src="image/no3.svg" height="80px">
+             <img src="image/no1.svg" height="50px">
             </div>
 
             <div style="float:left;padding-left:20px;width:80%;">
@@ -102,11 +102,11 @@
 
 
             <div style="width:100%;padding-top:60px;padding-left:40%;width:20%;">
-            <a href="box?id={$p.eid}&keepThis=true&TB_iframe=true&height=500&width=900" title="活动标题" class="thickbox" style="text-decoration: none;cursor:pointer;">
-            <div id="" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer listBtn">
+            
+            <div style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer listBtn" onclick="openBox('{$p.eid}')">
               OK
             </div>
-            </a>
+            
             </div>  
 </div>
 </div>

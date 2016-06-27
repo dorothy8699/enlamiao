@@ -4,7 +4,7 @@
 	border-spacing:0px;
 	border:solid #565656;
 	border-width:2px 0 0 2px;
-	-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #565656;
+	/*-moz-box-shadow:7px 7px 16px #000000; -webkit-box-shadow:7px 7px 16px #000000; box-shadow:7px 7px 16px #565656;*/
 
 }
 .listTable tr{
@@ -20,9 +20,9 @@
 }
 
 .listTable tr:nth-child(1){
-	color:#5bc3b5;
-	font-size:15px;
-	background: #565656;
+	color: #FFF;
+    font-size: 15px;
+    background: #de5233;
 }
 
 
@@ -53,13 +53,11 @@
 }
 
 
-
-
-
 /* thickbox */
 #TB_window{
 	border:0;
 	background: #FFF;
+	top:10%;
 }
 
 #TB_title{
@@ -75,8 +73,8 @@
 
 /* basic style */
 .close {
-    background: #5bc3b5;
-    color: #565656;
+    background: #de5233;
+    color: #FFF;
     border-radius: 25px;
     line-height: 40px;
     text-align: center;
@@ -91,7 +89,7 @@
 
 .close:hover{
     background: #565656;
-    color: #5bc3b5;
+    color: #FFF;
     -webkit-transform:rotate(180deg);
 	transform:rotate(180deg);
 }

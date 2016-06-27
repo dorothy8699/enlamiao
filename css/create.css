@@ -1,5 +1,5 @@
 .title-up{
-	font-size:18px;color:#565656;font-weight: bolder;
+	font-size:18px;color:#565656;font-weight: bolder;margin-top:10px;
 }
 .title-down{
 	font-size:13px;line-height: 120%;
@@ -49,4 +49,13 @@
 	width: 50px;
 	-webkit-border-radius: 50px;
 	border-radius:50px;
+}
+
+
+.error-area{
+	width:100%;border:1px solid #de5233;background:#fcf0ed;color:#de5233;padding-left:15px;
+}
+
+.error-msg{
+	float:left;height:30px;line-height:30px;padding-left:10px;
 }
