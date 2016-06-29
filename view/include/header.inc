@@ -8,8 +8,6 @@
 <div style="width: 100%;height: 55px;line-height:55px;border-top: 1px solid #d2d2d2;border-bottom: 1px solid #e5e5e5;background-color: #fafafa;">
 		<marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="80%" onmouseover="this.stop();" onmouseout="this.start();"> 
 		<img src="image/calendar.svg" width="15px"> 只需三步,建设高效执行力团队
-		<!--
-您只需一键<span class="color-r">发布</span>活动计划,嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向,有效提高团队建设工作效率-->
 		</marquee>
 
 </div>

@@ -39,6 +39,7 @@ $smarty -> display('finish.html'); */
 
 
 require './core/MySmarty.class.php';
+require './model/Validator.php';
 /**
  * function showTop
  *
@@ -46,39 +47,53 @@ require './core/MySmarty.class.php';
  */ 
 function init(){	
 
-
-	$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	$chars = str_shuffle($chars);
-	$subchars = substr($chars,0,10) . strtotime(date("Y-m-d H:i:s",time()));
+	$smarty = new MySmarty();
+	$smarty->caching = false;
 
 	$data = array(
-		"eid"=>$subchars,
 		"title"=>$_POST['title'],
-		"start"=>$_POST['datetimes'],
-		"content"=>$_POST['content']
+		"content"=>$_POST['content'],
+		"start"=>$_POST['datetimes']
 	);
 
+	// test eid
+	// test title
+	// test content
+	// test start
+	$validator = new Validator($data);
+	$error = $validator->checkCreateData($data);
+	if(!empty($error)) {
+		$smarty -> assign('error',$error); 
+		$smarty -> assign('start',$data['start']); 
+		$smarty -> assign('content',$data['content']); 
+		$smarty -> assign('title',$data['title']); 
+		$smarty->display('create.tpl');
+		
+	}else{
+		$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		$chars = str_shuffle($chars);
+		$data['eid'] = substr($chars,0,10) . strtotime(date("Y-m-d H:i:s",time()));
+		$periodArr = explode("\r\n", trim($data['start']));
 
-	$periodArr = explode("\r\n", trim($data['start']));
-
-	$db = new mysqli('localhost', 'root', '','enlamiao');
-	$sql = "INSERT INTO event(eid, title, start, content) VALUES(?,?,?,?)";
-	$stmt= $db->prepare($sql); 
-	$stmt->bind_param('ssss', $data['eid'], $data['title'], $data['start'], $data['content']); 
-	$stmt->execute();
-
-	$sql = "INSERT INTO period(eid, begin) VALUES(?,?)";
-	foreach($periodArr as $period){
+		$db = new mysqli('localhost', 'root', '','enlamiao');
+		$sql = "INSERT INTO event(eid, title, start, content) VALUES(?,?,?,?)";
 		$stmt= $db->prepare($sql); 
-		$stmt->bind_param('ss', $data['eid'], $period); 
+		$stmt->bind_param('ssss', $data['eid'], $data['title'], $data['start'], $data['content']); 
 		$stmt->execute();
-	}
 
-	$link = sprintf('http://%s/enlamiao/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
-	$smarty = new MySmarty();
-	
-	$smarty -> assign('link',$link);
-	$smarty->display('finish.tpl');
+		$sql = "INSERT INTO period(eid, begin) VALUES(?,?)";
+		foreach($periodArr as $period){
+			$stmt= $db->prepare($sql); 
+			$stmt->bind_param('ss', $data['eid'], $period); 
+			$stmt->execute();
+		}
+
+		$link = sprintf('http://%s/enlamiao/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
+		$smarty = new MySmarty();
+		
+		$smarty -> assign('link',$link);
+		$smarty->display('finish.tpl');
+	}
 }
 
 

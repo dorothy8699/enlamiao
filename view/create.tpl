@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/create.css" >
     <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/create.js"></script>
+    <script type="text/javascript" src="js/event.js"></script>
     
     
 		<title></title>
@@ -23,7 +23,7 @@
 <div style="width:100%;">
 <div style="width:70%;margin:0 15% 0 15%;color:#565656;padding:2%;/*border-radius:20px;-moz-box-shadow:7px 7px 30px #008080; -webkit-box-shadow:7px 7px 16px #008080; box-shadow:7px 7px 16px #008080;*/">
 
-    <form id="createForm" action="confirm.html" method="post">
+    <form id="createForm" action="finish.html" method="post">
           <div style="padding:15px 10px;">
             <div style="float:left;" class="title-step">
              <img src="image/no1.svg" height="50px">
@@ -32,12 +32,12 @@
 
             <div style="float:left;padding-left:20px;width:80%;">
               <!-- error message start -->
-              <div id="title-error-area" class="error-area">
+              <div id="title-error-area" class="error-area" style="{if isset($error['title'])}display:block;{else}display:none;{/if}">
                 <div style="height:30px;line-height:30px;float:left;">
                       <img src="image/warning.svg" height="20px" class="pdt5">
                 </div>
                 <div id="title-error-msg" class="error-msg">
-                  请输入活动主题
+                    {$error['title']}
                 </div>
                 <div style="clear:both;"></div>
               </div>
@@ -46,7 +46,7 @@
               <div class="title-up">请输入活动主题</div>
               <div class="title-down">团队建设、聚餐卡拉OK、旅行、登山、足球、游戏等</div>
               <div style="padding-top:5px;">
-                <input type="text" id="title" class="title" name="title" style="height:30px;width:100%;">
+                <input type="text" id="title" class="title" name="title" style="height:30px;width:100%;" maxlength="100" alue="{$title}">
               </div>
             </div>
 
@@ -59,12 +59,12 @@
 
             <div style="float:left;padding-left:20px;width:80%;">
               <!-- error message start -->
-              <div id="content-error-area" class="error-area">
+              <div id="content-error-area" class="error-area" style="{if isset($error['content'])}display:block;{else}display:none;{/if}">
                 <div style="height:30px;line-height:30px;float:left;">
                       <img src="image/warning.svg" height="20px" class="pdt5">
                 </div>
                 <div id="content-error-msg" class="error-msg">
-                  请输入活动详细
+                  {$error['content']}
                 </div>
                 <div style="clear:both;"></div>
               </div>
@@ -74,7 +74,7 @@
               <div class="title-up">请输入活动详细</div>
               <div class="title-down">地点、参加者、费用等</div>
               <div style="padding-top:5px;">
-                <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="20"></textarea>
+                <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="20" maxlength="3000" value="{$content}"></textarea>
                 
               </div>
             </div>
@@ -89,12 +89,12 @@
 
             <div style="float:left;padding-left:20px;width:80%;">
                 <!-- error message start -->
-              <div id="time-error-area" class="error-area">
+              <div id="start-error-area" class="error-area" style="{if isset($error['start'])}display:block;{else}display:none;{/if}">
                 <div style="height:30px;line-height:30px;float:left;">
                       <img src="image/warning.svg" height="20px" class="pdt5">
                 </div>
-                <div id="time-error-msg" class="error-msg">
-                  请选择活动候补时间
+                <div id="start-error-msg" class="error-msg">
+                  {if isset($error['start'])}{$error['start']}{/if}
                 </div>
                 <div style="clear:both;"></div>
               </div>
@@ -114,18 +114,13 @@
                         <div class="circle" style="position:absolute;right:5px;bottom:0;cursor:pointer;opacity:0.7;"><img src="image/calendar.svg"></div>
                     </div>-->
                     <div style="float:left;width:50%;">
-                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;" rows="17"></textarea>
+                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;" rows="15" value="{$start|nl2br}"></textarea>
                     </div>
   
                      <div style="float:left;margin-left:10px;">
                       <input type="text" id="datetimepicker" style="display: none;">
                       </div> 
                     </div>
-                    
-
-
-
-                    
                    </div>
 
                 </div>  
@@ -139,12 +134,6 @@
             </div>
 
             <div style="clear:both;"></div>  
-
-            <!--<div style="padding-top:40px;margin-left:20%;color:#565656;">
-              <p id="createBtn" class="okBtn">
-                <span>嗯啦喵</span>
-              </p>
-            </div>-->
 
             <div style="width:100%;padding-top:60px;padding-left:40%;width:20%;">
             <div id="createBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer createBtn">

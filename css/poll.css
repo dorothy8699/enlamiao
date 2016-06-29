@@ -1,6 +1,4 @@
 .pollTable{
-	margin-left: 10%;
-	margin-right:10%;
 	width: 80%;
 	color:#565656;
 	border-spacing:0px;
@@ -44,6 +42,13 @@
 	font-size:13px;line-height: 120%;
 }
 
+.error-area{
+	width:100%;color:#de5233;
+}
+
+.error-msg{
+	float:left;height:30px;line-height:30px;padding-left:10px;
+}
 
 
 

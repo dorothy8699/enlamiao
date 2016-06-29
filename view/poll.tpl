@@ -15,12 +15,23 @@
 	<div style="margin-top:30px;padding-top:20px;padding-bottom:20px;padding-left:10%;padding-right:10%;">
 	          <form id="pollForm" method="post">
 	            <div>	
-              <div style="float:left"><img src="image/no1.svg" height="40px"></div>
-              <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请输入姓名或昵称</div>
-              <div style="clear:both;"></div>
+                <div style="float:left"><img src="image/no1.svg" height="40px"></div>
+                <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请输入姓名或昵称</div>
+                <div style="clear:both;"></div>
               </div>
 
-              <div style="margin-top:10px;margin-left:70px;width:50%;">
+              <div style="margin-top:10px;margin-left:60px;width:50%;">
+              <!-- error message start -->
+              <div id="name-error-area" class="error-area" style="display:none">
+                <div style="height:30px;line-height:30px;float:left;">
+                      <img src="image/warning.svg" height="20px" class="pdt5">
+                </div>
+                <div id="name-error-msg" class="error-msg">
+                  请输入姓名或昵称
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              <!-- error message end -->
               <input type="text" name="username" id="username" style="height:25px;">
               </div>
               
@@ -31,7 +42,18 @@
               <div style="clear:both;"></div>
               </div>
 
-              <div style="margin-top:10px;max-height:500px;overflow-y:auto;">
+              <div style="margin-top:10px;max-height:500px;overflow-y:auto;margin-left:60px;">
+                <!-- error message start -->
+                <div id="start-error-area" class="error-area" style="display:none">
+                  <div style="height:30px;line-height:30px;float:left;">
+                        <img src="image/warning.svg" height="20px" class="pdt5">
+                  </div>
+                  <div id="start-error-msg" class="error-msg">
+                    请完整选择所有日程
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <!-- error message end -->
               <table class="pollTable">
                 {foreach from=$pollresult item=p}
                

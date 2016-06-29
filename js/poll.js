@@ -1,34 +1,84 @@
 
 $(document).ready(function(){
-	jQuery(".btn").mouseenter(function(){
-    	jQuery(".btn").hide();
+
+    var event = {
+    param:{username: $("#username")},
+    msg:{
+        NAME_ERROR: "请输入1－20位字符",
+        NAME_IS_BLANK: "请输入姓名或昵称",
+        START_ERROR: "请完整选择所有日程",
+        START_WARNING: "非法输入"
+    },
+    error:{
+        name: $("#name-error-msg"),
+        start: $("#start-error-msg"),
+        nameArea: $("#name-error-area"),
+        startArea: $("#start-error-area"),
+    },
+    checkPollValue: function(){
+            var flg = false;
+            if(!this.param.username.val()){
+                this.error.name.html(this.msg.NAME_IS_BLANK);
+                this.error.nameArea.show();
+                flg = true;
+            }
+            else if(this.param.username.val().length > 20){
+                this.error.name.html(this.msg.NAME_ERROR);
+                this.error.nameArea.show();
+                flg = true;
+            }
+
+            $('.pollTable tr td:nth-child(2)').each(function(){
+                var radio = $(this).find("input[type=radio]:checked");
+                if (radio.length <1 ){
+                    flg = true;
+                    event.error.start.html(event.msg.START_ERROR);
+                    event.error.startArea.show();
+                    return false;
+                }else if(!radio.val().match(/^[0-2]*$/) ){
+                    flg = true;
+                    event.error.start.html(event.msg.START_WARNING);
+                    event.error.startArea.show();
+                    return false;
+                }
+            });
+            
+            return flg;
+        }
+    };
+
+	$(".btn").mouseenter(function(){
+    	$(".btn").hide();
     	$(".btn-hover").show();
     });
 
-    jQuery(".btn-hover").mouseout(function(){
-    	jQuery(".btn").show();
-    	jQuery(".btn-hover").hide();
+    $(".btn-hover").mouseout(function(){
+    	$(".btn").show();
+    	$(".btn-hover").hide();
     });
 
-    jQuery("#pollBtn").click(function(){
-        //$("#pollForm").submit();
+    $("#pollBtn").click(function(){
+
+         //var flg = event.checkPollValue();
+         //if(flg) return;
          $.ajax({
              url: "poll",  
              type: "POST",
              data: $("#pollForm").serialize(),
              async: false,
-             error: function(){  
+             error: function(data){  
                  alert('Error loading XML document');  
              },  
              success: function(data,status){
-                 tb_remove();
-                 window.parent.location.reload();
+                alert("success");
+                //tb_remove();
+                 //window.parent.location.reload();
              }
          });
 
     });
 
-    jQuery(".yesBtn").click(function(){
+    $(".yesBtn").click(function(){
         $(this).attr("src","image/clickedyes.svg");
         $(this).next('.radioyes').attr("checked","checked");
         var noBtn = $(this).closest('td').find('.noBtn');
@@ -36,7 +86,7 @@ $(document).ready(function(){
         noBtn.next('.radiono').removeAttr("checked");
     });
 
-    jQuery(".noBtn").click(function(){
+    $(".noBtn").click(function(){
         $(this).attr("src","image/clickedno.svg");
         $(this).next('.radiono').attr("checked","checked");
         var yesBtn = $(this).closest('td').find('.yesBtn');
@@ -44,22 +94,22 @@ $(document).ready(function(){
         yesBtn.next('.radioyes').removeAttr("checked");
     });
 
-    jQuery(".yesBtn").mouseenter(function(){
+    $(".yesBtn").mouseenter(function(){
     	if($(this).attr("src")=="image/clickedyes.svg") return;
         $(this).attr("src","image/hoveryes.svg");
     });
 
-    jQuery(".noBtn").mouseenter(function(){
+    $(".noBtn").mouseenter(function(){
     	if($(this).attr("src")=="image/clickedno.svg") return;
         $(this).attr("src","image/hoverno.svg");
     });
 
-    jQuery(".yesBtn").mouseout(function(){
+    $(".yesBtn").mouseout(function(){
     	if($(this).attr("src")=="image/clickedyes.svg") return;
         $(this).attr("src","image/yes.svg");
     });
 
-    jQuery(".noBtn").mouseout(function(){
+    $(".noBtn").mouseout(function(){
     	if($(this).attr("src")=="image/clickedno.svg") return;
         $(this).attr("src","image/no.svg");
     });
