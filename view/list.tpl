@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
     <link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/thickbox.css">
@@ -101,7 +101,7 @@
             <div style="clear:both;"></div>  
 
 
-            <div style="width:100%;padding-top:60px;padding-left:40%;width:20%;">
+            <div style="width:100%;padding-top:60px;padding-left:70px;width:20%;">
             
             <div style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer listBtn" onclick="openBox('{$p.eid}')">
               OK

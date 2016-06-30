@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
     <link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/create.css" >
     <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/event.js"></script>
+    <script type="text/javascript" src="js/create.js"></script>
     
     
 		<title></title>
@@ -74,7 +74,7 @@
               <div class="title-up">请输入活动详细</div>
               <div class="title-down">地点、参加者、费用等</div>
               <div style="padding-top:5px;">
-                <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="20" maxlength="3000" value="{$content}"></textarea>
+                <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="20" maxlength="3000">{if isset($content)}{$content|nl2br}{/if}</textarea>
                 
               </div>
             </div>
@@ -114,7 +114,7 @@
                         <div class="circle" style="position:absolute;right:5px;bottom:0;cursor:pointer;opacity:0.7;"><img src="image/calendar.svg"></div>
                     </div>-->
                     <div style="float:left;width:50%;">
-                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;" rows="15" value="{$start|nl2br}"></textarea>
+                    <textarea id="datetimes" class="datetimes" name="datetimes" style="width:100%;resize:none;" rows="15">{if isset($start)}{$start}{/if}</textarea>
                     </div>
   
                      <div style="float:left;margin-left:10px;">

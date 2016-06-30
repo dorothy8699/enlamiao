@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
     <link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/top.css" >

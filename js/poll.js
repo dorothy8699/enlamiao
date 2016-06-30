@@ -59,8 +59,8 @@ $(document).ready(function(){
 
     $("#pollBtn").click(function(){
 
-         //var flg = event.checkPollValue();
-         //if(flg) return;
+         var flg = event.checkPollValue();
+         if(flg) return;
          $.ajax({
              url: "poll",  
              type: "POST",
@@ -70,9 +70,20 @@ $(document).ready(function(){
                  alert('Error loading XML document');  
              },  
              success: function(data,status){
-                alert("success");
-                //tb_remove();
-                 //window.parent.location.reload();
+                data = jQuery.parseJSON(data);
+                if(data == "success"){
+                   tb_remove();
+                   window.parent.location.reload();
+                }else{
+                    if(data.nameErr){
+                        event.error.name.html(data.nameErr);
+                        event.error.nameArea.show();
+                    }
+                    if(data.voteErr){
+                        event.error.start.html(data.voteErr);
+                        event.error.startArea.show();
+                    }
+                }
              }
          });
 
