@@ -21,7 +21,8 @@ class Validator{
 			$rows = explode("\r\n", trim($params['start']));
 			if(count($rows) > 15){
 				$error['start'] = "候补时间不能超过15行";
-			}else{
+			}
+			/*else{
 				$preg = "/^20[0-9]{2}\/[0-1]{1}[0-9]{1}\/[0-3]{1}[0-9]{1} [0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}〜$/";
 				foreach($rows as $start){
 					if(!preg_match($preg, $start)){
@@ -29,7 +30,7 @@ class Validator{
 						break;
 					}
 				}
-			}
+			}*/
 		}
 		return $error;
 	}

@@ -13,16 +13,17 @@ body {
 
 input,textarea{
     outline: none;
-    border: 2px solid #efefef;
+    border: 1px solid #dbdee0;
     font-size:13px;
     padding-left: 15px;
+    background-color: #fafafa;
 }
 textarea{
     padding-top:15px;
 }
 
 input:focus,textarea:focus{
-    border: 2px solid #d2d2d2;
+    border: 1px solid #d2d2d2;
 }
 
 a{text-decoration: none;}
@@ -52,4 +53,16 @@ a{text-decoration: none;}
 
 
 .pdt5 { padding-top:5px; }
+
+.circle img{
+    width: 200px;
+    height: 200px;
+    background-color: #e7f4f5;
+    -webkit-border-radius: 100px;
+    border-radius:100px;
+}
+
+.mt30{
+    margin-top:30px;
+}
 

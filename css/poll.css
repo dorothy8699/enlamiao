@@ -1,5 +1,5 @@
 .pollTable{
-	width: 80%;
+	width: 100%;
 	color:#565656;
 	border-spacing:0px;
 	border:solid #efefef;
@@ -47,7 +47,7 @@
 }
 
 .error-msg{
-	float:left;height:30px;line-height:30px;padding-left:10px;
+	height:30px;line-height:30px;padding-left:30px;
 }
 
 

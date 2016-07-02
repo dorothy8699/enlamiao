@@ -17,6 +17,19 @@
 }
 */
 
+.xdsoft_datetimepicker{
+	background: #fafafa;
+    border: 0;
+}
+
+.xdsoft_datetimepicker .xdsoft_label {
+	background: #fafafa;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
+	border:1px solid #dbdee0;
+}
+
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
 	background: #008080;
     box-shadow: #565656 0px 1px 3px 0px inset;

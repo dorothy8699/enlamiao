@@ -47,7 +47,9 @@
 
 
 <div style="background-color:#e5e5e5;width:100%;">
+
 <div class="container" style="padding-top:5%;">
+
   <div class="row">
     <div class="col-md-6">
       <div style="padding-left:10%;">
@@ -78,6 +80,105 @@
     </div>
   </div>
 </div>
+</div>
+
+<div style="background-color:#fafafa;width:100%;">
+<div class="container" style="padding-top:5%;padding-bottom:5%;">
+
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
+          <li style="float:left;padding-left:20%;"><div class="min-circle-select"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+        </ul>
+     </div> 
+  </div> 
+
+  <div class="row">
+    <div class="col-md-4">
+      <!-- botton start -->
+      <div style="padding-top:20%;color:#565656;text-align:center;">
+          <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+          <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+      </div>
+      <!-- botton end -->
+    </div>
+    <div class="col-md-8">
+      <div>
+      <img src="image/example1.svg" width="100%">
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div style="border-top:2px solid #e5e5e5;margin-top:40px;margin-bottom:40px;"></div>
+    </div>
+  </div>-->
+
+    <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
+          <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle-select"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+        </ul>
+     </div> 
+  </div> 
+
+
+    <div class="row">
+    <div class="col-md-4">
+      <!-- botton start -->
+      <div style="padding-top:20%;color:#565656;text-align:center;">
+          <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+          <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+      </div>
+      <!-- botton end -->
+    </div>
+    <div class="col-md-8">
+      <div>
+      <img src="image/example1.svg" width="100%">
+      </div>
+    </div>
+    </div>
+
+    <!--<div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div style="border-top:2px solid #e5e5e5;margin-top:40px;margin-bottom:40px;"></div>
+      </div>
+    </div>-->
+      <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
+          <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:15%;"><div class="min-circle-select"></div></li>
+        </ul>
+     </div> 
+  </div> 
+
+
+    <div class="row">
+    <div class="col-md-4">
+      <!-- botton start -->
+      <div style="padding-top:20%;color:#565656;text-align:center;">
+          <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+          <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+      </div>
+      <!-- botton end -->
+    </div>
+    <div class="col-md-8">
+      <div>
+      <img src="image/example1.svg" width="100%">
+      </div>
+    </div>
+    </div>
 </div>
 
 
