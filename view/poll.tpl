@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/comm.css" >
@@ -39,7 +40,7 @@
 
               <div style="margin-top:20px;">	
               <div style="float:left"><img src="image/no1.svg" height="40px"></div>
-              <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请选择日程	</div>
+              <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请投票选择	</div>
               <div style="clear:both;"></div>
               </div>
 
@@ -50,7 +51,7 @@
                         <img src="image/warning.svg" height="25px">
                   </div>
                   <div id="start-error-msg" class="error-msg">
-                    请完整选择所有日程
+                    每一项都必须投票
                   </div>
                   <div style="clear:both;"></div>
                 </div>
@@ -59,7 +60,7 @@
                 <table class="table table-bordered">
                 {foreach from=$pollresult item=p}
                    <tr>
-                   <td>{$p.begin}</td>
+                   <td>{$p.option}</td>
                    <td>
 	                   <div>
 		                   <div style="float:left">
@@ -71,7 +72,7 @@
                          <img class="noBtn" src="image/no.svg" height="30px" style="cursor:pointer">
                          <input type="radio" name="poll{$p.pid}" class="radiono" value="2"  style="display:none">
                        </div>
-		                   <div style="float:left;height:30px;line-height:30px;padding-left:5px;">下次么么哒</div>
+		                   <div style="float:left;height:30px;line-height:30px;padding-left:5px;">暂不考虑</div>
 	                   </div> 
 	                </td>   
                    <tr>

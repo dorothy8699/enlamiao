@@ -28,10 +28,10 @@ function init(){
 		}
 	}
 
-	$periods = getPeriod($params["eventid"]);
-	foreach($periods as $period){
-		if(!isset($polling[$period])){
-			$polling[$period] = array(
+	$Options = getItems($params["eventid"]);
+	foreach($Options as $option){
+		if(!isset($polling[$option])){
+			$polling[$option] = array(
 				'pid' => "",
 				'eid' => "",
 				'name' => "",
@@ -60,20 +60,21 @@ function init(){
 	}
 }
 
-function getPeriod($eid){
+function getItems($eid){
 		$db = new mysqli('localhost', 'root', '','enlamiao');
-		$sql = "SELECT id from period where eid=?";
+		$sql = "SELECT id from item where eid=?";
 		$stmt= $db->prepare($sql); 
 		$stmt->bind_param('s', $eid); 
 		$stmt->execute();
 		$stmt->store_result();
 		$stmt->bind_result($id);
-		$periods = array();
+		$items = array();
 		while($stmt->fetch()) {
-			$periods[] = $id;
+			$items[] = $id;
 		}
-		return $periods;
+		return $items;
 }
+
 
 
 

@@ -70,6 +70,7 @@ $(document).ready(function(){
                  alert('Error loading XML document');  
              },  
              success: function(data,status){
+                console.log(data);
                 data = jQuery.parseJSON(data);
                 if(data == "success"){
                    tb_remove();

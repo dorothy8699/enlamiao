@@ -7,5 +7,6 @@ require './core/MySmarty.class.php';
  */ 
 function init(){		
 		$smarty = new MySmarty();
+		$smarty -> assign('end', date("Y-m-d",strtotime("+1 month")));
 		$smarty->display('create.tpl');
 }

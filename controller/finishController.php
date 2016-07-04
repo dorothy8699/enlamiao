@@ -53,38 +53,38 @@ function init(){
 	$data = array(
 		"title"=>$_POST['title'],
 		"content"=>$_POST['content'],
-		"start"=>$_POST['datetimes']
+		"options"=>$_POST['options'],
+		"end"=>$_POST['end']
 	);
 
-	// test eid
-	// test title
-	// test content
-	// test start
+	if(empty($data['end'])) $data['end'] = date("Y-m-d",strtotime("+1 month"));
+
 	$validator = new Validator($data);
 	$error = $validator->checkCreateData($data);
 	if(!empty($error)) {
 		$smarty -> assign('error',$error); 
-		$smarty -> assign('start',$data['start']); 
+		$smarty -> assign('title',$data['title']);
 		$smarty -> assign('content',$data['content']); 
-		$smarty -> assign('title',$data['title']); 
+		$smarty -> assign('options',$data['options']);
+		$smarty -> assign('end',$data['end']); 
 		$smarty->display('create.tpl');
 		
 	}else{
 		$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 		$chars = str_shuffle($chars);
 		$data['eid'] = substr($chars,0,10) . strtotime(date("Y-m-d H:i:s",time()));
-		$periodArr = explode("\r\n", trim($data['start']));
+		$optionArr = explode("\r\n", trim($data['options']));
 
 		$db = new mysqli('localhost', 'root', '','enlamiao');
-		$sql = "INSERT INTO event(eid, title, start, content) VALUES(?,?,?,?)";
+		$sql = "INSERT INTO event(eid, title, content, options, end) VALUES(?,?,?,?,?)";
 		$stmt= $db->prepare($sql); 
-		$stmt->bind_param('ssss', $data['eid'], $data['title'], $data['start'], $data['content']); 
+		$stmt->bind_param('sssss', $data['eid'], $data['title'],$data['content'], $data['options'], $data['end']); 
 		$stmt->execute();
 
-		$sql = "INSERT INTO period(eid, begin) VALUES(?,?)";
-		foreach($periodArr as $period){
+		$sql = "INSERT INTO item(eid, option) VALUES(?,?)";
+		foreach($optionArr as $option){
 			$stmt= $db->prepare($sql); 
-			$stmt->bind_param('ss', $data['eid'], $period); 
+			$stmt->bind_param('ss', $data['eid'], $option); 
 			$stmt->execute();
 		}
 

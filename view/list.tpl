@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
      <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/comm.css" >
@@ -44,6 +45,16 @@
       </div>
     </div>
 
+    <div class="row mt30">
+      <div class="col-md-1 col-md-offset-1">
+          <img src="image/no1.svg" height="50px">
+      </div>
+      <div class="col-md-8">
+          <div class="title-up">投票截止</div>
+          <div style="padding-top:5px;" class="title-down">{$end}</div>
+      </div>
+    </div>
+
 
     <div class="row mt30">
       <div class="col-md-1 col-md-offset-1">
@@ -66,13 +77,15 @@
                 <tbody>
                   {foreach from=$pollresult item=p}
                   <tr>
-                    <td>{$p.begin}</td>
+                    <td>{$p.option}</td>
                     <td>{$p.yes}人</td>
                     <td>{$p.no}人</td>
                       {foreach from=$p.user item=u}
-                      <td>
-                      <img src="{$u.voteimg}" width="30px">
-                      </td>
+                        {if !empty($u.voteimg)}
+                        <td>
+                          <img src="{$u.voteimg}" width="30px">
+                        </td>
+                        {/if}
                       {/foreach}
                   </tr>
                   {/foreach} 

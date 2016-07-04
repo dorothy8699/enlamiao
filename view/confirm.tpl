@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/confirm.css" >
     <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
