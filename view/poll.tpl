@@ -14,83 +14,90 @@
 	</head>
 	<body>
 
-	<div style="margin-top:30px;padding-top:20px;padding-bottom:20px;padding-left:10%;padding-right:10%;">
-	          <form id="pollForm" method="post">
-	            <div>	
-                <div style="float:left"><img src="image/no1.svg" height="40px"></div>
-                <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请输入姓名或昵称</div>
-                <div style="clear:both;"></div>
+  <div style="margin-top:30px;padding-top:20px;padding-bottom:20px;">
+   <form id="pollForm" method="post">
+        <div class="container">
+            <div class="row">
+              <div  class="col-md-8 col-md-offset-2">
+                  <div class="title-up" style="padding-bottom:10px;">请输入姓名或昵称</div>
               </div>
+            </div>  
 
-              <div style="margin-top:10px;margin-left:60px;width:50%;">
-              <!-- error message start -->
-              <div id="name-error-area" class="error-area" style="display:none">
-                <div style="height:30px;line-height:30px;float:left;">
-                      <img src="image/warning.svg" height="25px">
-                </div>
-                <div id="name-error-msg" class="error-msg">
-                  请输入姓名或昵称
-                </div>
-                <div style="clear:both;"></div>
-              </div>
-              <!-- error message end -->
-              <input type="text" name="username" id="username" style="height:25px;">
-              </div>
-              
-
-              <div style="margin-top:20px;">	
-              <div style="float:left"><img src="image/no1.svg" height="40px"></div>
-              <div style="float:left;height:40px;line-height:40px;padding-left:20px;" class="title-up">请投票选择	</div>
-              <div style="clear:both;"></div>
-              </div>
-
-              <div style="margin-top:10px;max-height:500px;overflow-y:auto;margin-left:60px;">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
                 <!-- error message start -->
-                <div id="start-error-area" class="error-area" style="display:none">
+                <div id="name-error-area" class="error-area" style="display:none">
                   <div style="height:30px;line-height:30px;float:left;">
                         <img src="image/warning.svg" height="25px">
                   </div>
-                  <div id="start-error-msg" class="error-msg">
-                    每一项都必须投票
+                  <div id="name-error-msg" class="error-msg">
+                    请输入姓名或昵称
                   </div>
-                  <div style="clear:both;"></div>
                 </div>
                 <!-- error message end -->
-                <div class="table-responsive">
-                <table class="table table-bordered">
-                {foreach from=$pollresult item=p}
-                   <tr>
-                   <td>{$p.option}</td>
-                   <td>
-	                   <div>
-		                   <div style="float:left">
-                       <img class="yesBtn" src="image/yes.svg" height="30px" style="cursor:pointer">
-                        <input type="radio" name="poll{$p.pid}" class="radioyes" value="1" style="display:none">
-                       </div>
-		                   <div style="float:left;height:30px;line-height:30px;padding-left:5px;padding-right:10px;">我要参加</div>
-		                   <div style="float:left;">
-                         <img class="noBtn" src="image/no.svg" height="30px" style="cursor:pointer">
-                         <input type="radio" name="poll{$p.pid}" class="radiono" value="2"  style="display:none">
-                       </div>
-		                   <div style="float:left;height:30px;line-height:30px;padding-left:5px;">暂不考虑</div>
-	                   </div> 
-	                </td>   
-                   <tr>
-                {/foreach}
-                </table>
-                </div>
-               </div>
-
-          <div id="pollBtn" style="width:100%;padding-top:60px;padding-left:60px;width:20%;">
-            <div style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer pollBtn">
-              OK
+                <input type="text" name="username" id="username" style="height:25px;">
+              </div>
             </div>
-            
-          </div>  
-                
-          <input id="eventid" name="eventid" type="hidden" value="{$p.eid}">
-          </form>
 
-      </div>  
+            <div class="row">
+              <div  class="col-md-8 col-md-offset-2">
+                  <div class="title-up" style="padding-top:20px;padding-bottom:10px;">请投票选择</div>
+              </div>
+            </div>  
+
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <!-- error message start -->
+                  <div id="start-error-area" class="error-area" style="display:none">
+                    <div style="height:30px;line-height:30px;float:left;">
+                          <img src="image/warning.svg" height="25px">
+                    </div>
+                    <div id="start-error-msg" class="error-msg">
+                      每一项都必须投票
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                  <!-- error message end -->
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    {foreach from=$pollresult item=p}
+                       <tr>
+                       <td>{$p.option}</td>
+                       <td>
+                         <div>
+                           <div style="float:left">
+                           <img class="yesBtn" src="image/yes.svg" height="30px" style="cursor:pointer">
+                            <input type="radio" name="poll{$p.pid}" class="radioyes" value="1" style="display:none">
+                           </div>
+                           <div style="float:left;height:30px;line-height:30px;padding-left:5px;padding-right:10px;">我要参加</div>
+                           <div style="float:left;">
+                             <img class="noBtn" src="image/no.svg" height="30px" style="cursor:pointer">
+                             <input type="radio" name="poll{$p.pid}" class="radiono" value="2"  style="display:none">
+                           </div>
+                           <div style="float:left;height:30px;line-height:30px;padding-left:5px;">暂不考虑</div>
+                         </div> 
+                      </td>   
+                       <tr>
+                    {/foreach}
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <div style="width:100%;padding-top:60px;padding-bottom:150px;width:20%;">
+                  <div id="pollBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer pollBtn">
+                    OK
+                  </div>
+                </div>
+                <input id="eventid" name="eventid" type="hidden" value="{$p.eid}">
+              </div>
+            </div>
+                
+       </div>
+ </form>      
+</div>
+
 	</body>
 </html>
