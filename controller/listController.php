@@ -26,7 +26,7 @@ function init(){
 	$smarty -> assign('end',$end);
 
 
-	$sql = "SELECT i.id as pid, i.eid as eid,i.option as option,u.id as uid,u.name as uname,u.vote FROM item as i left join user as u on i.id=u.pid where i.eid=?";
+	$sql = "SELECT i.id as pid, i.eid as eid,i.opt as option,u.id as uid,u.name as uname,u.vote FROM item as i left join user as u on i.id=u.pid where i.eid=?";
 	$stmt= $db->prepare($sql); 
 	$stmt->bind_param('s', $eid); 
 	$stmt->execute();

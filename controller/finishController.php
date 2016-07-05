@@ -81,7 +81,7 @@ function init(){
 		$stmt->bind_param('sssss', $data['eid'], $data['title'],$data['content'], $data['options'], $data['end']); 
 		$stmt->execute();
 
-		$sql = "INSERT INTO item(eid, option) VALUES(?,?)";
+		$sql = "INSERT INTO item(eid, opt) VALUES(?,?)";
 		foreach($optionArr as $option){
 			$stmt= $db->prepare($sql); 
 			$stmt->bind_param('ss', $data['eid'], $option); 
