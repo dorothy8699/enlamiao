@@ -50,14 +50,28 @@ $(document).ready(function(){
 
 function openBox(eid){
     var w = 900,h = 500;
+    var w65 = 0.65, h9 = 0.90;
+    var w95 = 0.95;
     if (window.innerWidth)
-        w = window.innerWidth * 0.65;
+        w = window.innerWidth;
     else if ((document.body) && (document.body.clientWidth))
-        w = document.body.clientWidth * 0.65;
+        w = document.body.clientWidth;
     if (window.innerHeight)
-        h = window.innerHeight * 0.8;
+        h = window.innerHeight;
     else if ((document.body) && (document.body.clientHeight))
-        h = document.body.clientHeight * 0.8;
-    var url = "box?id=" + eid + "&keepThis=true&TB_iframe=true&height=" + h + "&width=" + w;
-    tb_show(null,url);
+        h = document.body.clientHeight;
+    
+    w = w < 500? w * w95 + 'px' : w * w65 + 'px';
+    h = h * h9 + 'px';
+    
+    var url = "box?id=" + eid;
+    var index=layer.open({
+            type: 2,
+            title: '请投票选择',
+            shadeClose: true,
+            shade: 0.8,
+            area: [w, h],
+            content: url
+        }); 
+    layer.iframeAuto(index); 
 }

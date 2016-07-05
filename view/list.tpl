@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
      <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/comm.css" >
-    <link rel="stylesheet" href="css/thickbox.css">
     <link rel="stylesheet" href="css/list.css">
     <link rel = "Shortcut Icon" href="fabicon.ico" type="image/x-icon" /> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/list.js"></script>
-    <script type="text/javascript" src="js/thickbox.js"></script>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
 		<title></title>
 	</head>
 	<body style="width:100%;height:100%;margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
