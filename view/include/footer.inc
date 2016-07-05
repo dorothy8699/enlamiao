@@ -1,4 +1,4 @@
-<div style="height:46px;background-image: url(image/agree.svg);background-repeat: repeat-x;margin-top:-46px;">
+<div style="height:88px;background-image: url(image/agree.svg);background-repeat: repeat-x;margin-top:-88px;">
 </div>
 
 <div style="height:100px;background:#565656;color:#FFF;text-align:center;padding-top:10px;">
