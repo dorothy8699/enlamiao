@@ -22,6 +22,6 @@ else if(strpos($req_type, 'poll')){
 	require './controller/pollController.php';
 }
 else{
-	require 'controller/TopController.php';
+	require 'controller/topController.php';
 };
 init();
