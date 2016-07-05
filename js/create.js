@@ -1,23 +1,24 @@
 
 $(document).ready(function(){
 	var event = {
-	param:{title: $("#title"), content:$("#content"), start:$("#datetimes")},
+	param:{title: $("#title"), content:$("#content"), options:$("#options"), end:$("#end")},
 	msg:{
 		TITLE_ERROR: "请输入1－100位字符",
 		TITLE_IS_BLANK: "请输入活动主题",
 		CONTENT_ERROR: "请输入1－3000位字符",
 		CONTENT_IS_BLANK: "请输入活动详细",
-		START_IS_BLANK: "请选择候补时间",
-		START_ERROR: "请选择1－15个候补时间",
-		START_OUT_FORTMAT: "候补时间格式不正确，请重新输入"
+		OPTIONS_IS_BLANK: "请输入1－15个候补选项",
+		END_IS_BLANK: "请选择投票有效期",
 	},
 	error:{
 		title: $("#title-error-msg"),
 		content: $("#content-error-msg"),
-		start: $("#start-error-msg"),
+		options: $("#options-error-msg"),
+		end: $("#end-error-msg"),
 		titleArea: $("#title-error-area"),
 		contentArea: $("#content-error-area"),
-		startArea: $("#start-error-area"),
+		optionsArea: $("#options-error-area"),
+		endArea: $("#end-error-area"),
 	},
 	checkCreateValue: function(){
 			var flg = false;
@@ -41,9 +42,14 @@ $(document).ready(function(){
 				this.error.contentArea.show();
 				flg = true;
 			}
-			if(!this.param.start.val()){
-				this.error.start.html(this.msg.START_IS_BLANK);
-				this.error.startArea.show();
+			if(!this.param.options.val()){
+				this.error.options.html(this.msg.OPTIONS_IS_BLANK);
+				this.error.optionsArea.show();
+				flg = true;
+			}
+			if(!this.param.end.val()){
+				this.error.end.html(this.msg.END_IS_BLANK);
+				this.error.endArea.show();
 				flg = true;
 			}
 			return flg;
@@ -51,8 +57,8 @@ $(document).ready(function(){
 	};
 
     $("#createBtn").click(function(){
-    	//var flg = event.checkCreateValue();
-    	//if(flg) return;
+    	var flg = event.checkCreateValue();
+    	if(flg) return;
         $("#createForm").submit();
     });
 
@@ -60,7 +66,7 @@ $(document).ready(function(){
 
     $("#end").datepicker({
     	monthNames: [ "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" ],
-    	dateFormat: "yy/mm/dd",
+    	dateFormat: "yy-mm-dd",
     });
 });
 

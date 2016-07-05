@@ -84,11 +84,11 @@
         </div>
         <div class="col-md-8">
                 <!-- error message start -->
-                <div id="start-error-area" class="error-area" style="{if isset($error['options'])}display:block;{else}display:none;{/if}">
+                <div id="options-error-area" class="error-area" style="{if isset($error['options'])}display:block;{else}display:none;{/if}">
                   <div style="height:30px;line-height:30px;float:left;">
                         <img src="image/warning.svg" height="20px">
                   </div>
-                  <div id="start-error-msg" class="error-msg">
+                  <div id="options-error-msg" class="error-msg">
                     {if isset($error['options'])}{$error['options']}{/if}
                   </div>
                   <div style="clear:both;"></div>
@@ -108,11 +108,11 @@
         </div>
         <div class="col-md-8">
                 <!-- error message start -->
-                <div id="start-error-area" class="error-area" style="{if isset($error['end'])}display:block;{else}display:none;{/if}">
+                <div id="end-error-area" class="error-area" style="{if isset($error['end'])}display:block;{else}display:none;{/if}">
                   <div style="height:30px;line-height:30px;float:left;">
                         <img src="image/warning.svg" height="20px">
                   </div>
-                  <div id="start-error-msg" class="error-msg">
+                  <div id="end-error-msg" class="error-msg">
                     {if isset($error['end'])}{$error['end']}{/if}
                   </div>
                   <div style="clear:both;"></div>
