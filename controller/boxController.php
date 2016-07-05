@@ -28,20 +28,20 @@ function init(){
 	$smarty -> assign('start',$end);
 
 
-	$sql = "SELECT i.id as pid, i.eid as eid,i.option as option,u.id as uid,u.name as uname,u.vote FROM item as i left join user as u on i.id=u.pid where i.eid=?";
+	$sql = "SELECT i.id as pid, i.eid as eid,i.opt as opt,u.id as uid,u.name as uname,u.vote FROM item as i left join user as u on i.id=u.pid where i.eid=?";
 	$stmt= $db->prepare($sql); 
 	$stmt->bind_param('s', $eid); 
 	$stmt->execute();
 	$stmt->store_result();
 	$optionArr = array();
-	$stmt->bind_result($pid,$eid,$option,$uid,$uname,$vote);
+	$stmt->bind_result($pid,$eid,$opt,$uid,$uname,$vote);
 
 	$optionArr = array();
 	while($stmt->fetch()) {
 		$optionArr[$pid] = array(
 			'pid'=>$pid,
     		'eid'=>$eid,
-    		'option'=>$option,
+    		'option'=>$opt,
     		'user' => "",
     		'yes' => isset($optionArr[$pid]['yes'])?$optionArr[$pid]['yes']:0,
     		'no' => isset($optionArr[$pid]['no'])?$optionArr[$pid]['no']:0
