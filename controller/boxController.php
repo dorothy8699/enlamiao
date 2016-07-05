@@ -9,7 +9,7 @@ require './core/MySmarty.class.php';
 function init(){	
 	
 	$eid = $_GET['id'];
-	$db = new mysqli('localhost', 'root', '','enlamiao');
+	$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
 	
 	$sql = "SELECT * FROM event where eid=?";
 	$stmt= $db->prepare($sql); 

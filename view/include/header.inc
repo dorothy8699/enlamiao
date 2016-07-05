@@ -20,7 +20,7 @@
 	  <div class="row">
 	    <div class="col-md-4">
 		    <div style="padding-top:10px;padding-bottom:10px;">
-			    <a href="/enlamiao">
+			    <a href="/">
 			    	<img src="image/logo01.svg" width="100%">
 		  		</a>
 		  	</div>	

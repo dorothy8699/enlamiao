@@ -75,7 +75,7 @@ function init(){
 		$data['eid'] = substr($chars,0,10) . strtotime(date("Y-m-d H:i:s",time()));
 		$optionArr = explode("\r\n", trim($data['options']));
 
-		$db = new mysqli('localhost', 'root', '','enlamiao');
+		$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
 		$sql = "INSERT INTO event(eid, title, content, options, end) VALUES(?,?,?,?,?)";
 		$stmt= $db->prepare($sql); 
 		$stmt->bind_param('sssss', $data['eid'], $data['title'],$data['content'], $data['options'], $data['end']); 
@@ -88,7 +88,7 @@ function init(){
 			$stmt->execute();
 		}
 
-		$link = sprintf('http://%s/enlamiao/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
+		$link = sprintf('http://%s/list?id=%s', $_SERVER['HTTP_HOST'], $data['eid']);
 		$smarty = new MySmarty();
 		
 		$smarty -> assign('link',$link);

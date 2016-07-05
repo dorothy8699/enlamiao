@@ -46,8 +46,7 @@ function init(){
 	if(!empty($error)){
 		echo json_encode($error);
 	}else{
-
-		$db = new mysqli('localhost', 'root', '','enlamiao');
+		$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
 		$sql = "INSERT INTO user(pid, eid, name, vote) VALUES(?,?,?,?)";
 
 		foreach($polling as $data){
@@ -61,7 +60,7 @@ function init(){
 }
 
 function getItems($eid){
-		$db = new mysqli('localhost', 'root', '','enlamiao');
+		$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
 		$sql = "SELECT id from item where eid=?";
 		$stmt= $db->prepare($sql); 
 		$stmt->bind_param('s', $eid); 
