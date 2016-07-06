@@ -2,7 +2,7 @@
 	font-size:18px;color:#565656;font-weight: bolder;margin-top:10px;
 }
 .title-down{
-	font-size:13px;line-height: 120%;
+	font-size:13px;line-height: 120%;padding-top:5px;
 }
 .title-step{
 	font-size:18px;font-weight: bold;
@@ -51,11 +51,11 @@
 }
 
 .createBtn{
-    border-radius:60px;width:100%;text-align:center;padding-bottom:5px;background:#565656;
+    border-radius:60px;width:100%;text-align:center;padding-bottom:5px;background:#de5233;
 }
 
 .createBtn:hover{
-    background:#de5233;color:#FFF;
+    background:#565656;color:#FFF;
 }
 
 .circle img{
@@ -66,7 +66,7 @@
 
 
 .error-area{
-	width:100%;border:1px solid #de5233;background:#fcf0ed;color:#de5233;padding-left:15px;
+	width:100%;/*border:1px solid #de5233;background:#fcf0ed;*/color:#de5233;/*padding-left:15px;*/
 }
 
 .error-msg{

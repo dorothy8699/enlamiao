@@ -22,9 +22,33 @@
 {include file="include/header.inc"}
 
 
-<div style="width:100%;background:#fafafa;padding-top:40px;">
+<div style="width:100%;background:#e5e5e5;padding-top:40px;">
 <form id="createForm" action="finish.html" method="post">
 <div class="container">
+
+    <!--<div class="row">
+      <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+              <div class="col-md-1">
+                <img src="image/no1.svg" height="50px">
+              </div>
+              <div class="col-md-8">
+                <div class="title-up">请输入活动主题</div>
+                <div class="title-down">团队建设、聚餐卡拉OK、旅行、登山、足球、游戏等</div>
+              </div>  
+            </div> 
+
+             <div class="row">
+              <div class="col-md-12">
+                  <div style="padding-top:5px;">
+                  <input type="text" id="title" class="title" name="title" style="height:30px;width:100%;" maxlength="100" alue="{$title}">
+                  </div>
+              </div>
+             </div>
+      </div>
+    </div>-->
+
+
     <div class="row">
       <div class="col-md-1 col-md-offset-1">
           <img src="image/no1.svg" height="50px">

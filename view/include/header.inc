@@ -29,6 +29,7 @@
 	</div>
 </div> 
 
+<!--
 <div style="border-top: 1px solid #d2d2d2;border-bottom: 1px solid #d2d2d2;background-color: #e5e5e5;width:100%;">
 	<div class="container">
 	  <div class="row">
@@ -41,5 +42,5 @@
 	  </div>
 	 </div>
 </div>	 
-
+-->
 	  
