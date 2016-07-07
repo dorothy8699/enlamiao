@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/comm.css" >
     <link rel="stylesheet" href="css/poll.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/event.js"></script>
     <script src="js/poll.js"></script>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -88,13 +89,12 @@
               <div class="col-md-8 col-md-offset-2">
                 <div style="width:100%;padding-top:20px;padding-bottom:20px;width:20%;">
                   <div id="pollBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer pollBtn">
-                    OK
+                      OK
                   </div>
                 </div>
                 <input id="eventid" name="eventid" type="hidden" value="{$p.eid}">
               </div>
-            </div>
-                
+            </div>               
        </div>
  </form>      
 </div>

@@ -1,59 +1,79 @@
+function createEvent(){
+var event = {
+    param:{username: $("#username")},
+    msg:{
+        NAME_ERROR: "请输入1－20位字符",
+        NAME_IS_BLANK: "请输入姓名或昵称",
+        START_ERROR: "请完整选择所有日程",
+        START_WARNING: "非法输入"
+    },
+    error:{
+        name: $("#name-error-msg"),
+        start: $("#start-error-msg"),
+        nameArea: $("#name-error-area"),
+        startArea: $("#start-error-area"),
+    },
+    checkPollValue: function(){
+            var flg = false;
+            if(!this.param.username.val()){
+                this.error.name.html(this.msg.NAME_IS_BLANK);
+                this.error.nameArea.show();
+                flg = true;
+            }
+            else if(this.param.username.val().length > 20){
+                this.error.name.html(this.msg.NAME_ERROR);
+                this.error.nameArea.show();
+                flg = true;
+            }
 
-$(document).ready(function(){
-	var event = {
-	param:{title: jQuery("#title"), content:jQuery("#content"), start:jQuery("#datetimes")},
-	msg:{
-		TITLE_ERROR: "请输入1－100位字符",
-		TITLE_IS_BLANK: "请输入活动主题",
-		CONTENT_ERROR: "请输入1－3000位字符",
-		CONTENT_IS_BLANK: "请输入活动详细",
-		START_ERROR: "请选择1－15个候补时间",
-		START_OUT_FORTMAT: "候补时间格式不正确，请重新输入"
-	},
-	error:{
-		title: jQuery("#title-error-msg"),
-		content: jQuery("#content-error-msg"),
-		start: jQuery("#start-error-msg"),
-		titleArea: jQuery("#title-error-area"),
-		contentArea: jQuery("#content-error-area"),
-		startArea: jQuery("#start-error-area"),
-	},
-	checkCreateValue: function(){
-			var flg = false;
-			if(!this.param.title.val()){
-				this.error.title.html(this.msg.TITLE_IS_BLANK);
-				this.error.titleArea.show();
-				flg = true;
-			}
-			else if(this.param.title.val().length > 100){
-				this.error.title.html(this.msg.TITLE_ERROR);
-				this.error.titleArea.show();
-				flg = true;
-			}
-			if(!this.param.content.val()){
-				this.error.content.html(this.msg.CONTENT_IS_BLANK);
-				this.error.contentArea.show();
-				flg = true;
-			}
-			else if(this.param.content.val().length > 3000){
-				this.error.content.html(this.msg.CONTENT_ERROR);
-				this.error.contentArea.show();
-				flg = true;
-			}
-			if(!this.param.start.val()){
-				this.error.start.html(this.msg.START_IS_BLANK);
-				this.error.startArea.show();
-				flg = true;
-			}
-			return flg;
-		}
-	};
-
-    jQuery("#createBtn").click(function(){
-    	var flg = event.checkCreateValue();
-    	if(flg) return;
-        $("#createForm").submit();
-    });
-});
-
+            $('.pollTable tr td:nth-child(2)').each(function(){
+                var radio = $(this).find("input[type=radio]:checked");
+                if (radio.length <1 ){
+                    flg = true;
+                    event.error.start.html(event.msg.START_ERROR);
+                    event.error.startArea.show();
+                    return false;
+                }else if(!radio.val().match(/^[0-2]*$/) ){
+                    flg = true;
+                    event.error.start.html(event.msg.START_WARNING);
+                    event.error.startArea.show();
+                    return false;
+                }
+            });
+            return flg;
+        },
+    poll: function(){
+        $.ajax({
+        url: "poll",  
+        type: "POST",
+        data: $("#pollForm").serialize(),
+        async: false,
+        error: function(data){  
+            alert('Error loading XML document');  
+        },  
+        success: function(data,status){
+            data = jQuery.parseJSON(data);
+                if(data == "success"){
+                   if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
+                    window.location.reload();
+                   }else{
+                    tb_remove();
+                    window.parent.location.reload();
+                   }
+                }else{
+                    if(data.nameErr){
+                        event.error.name.html(data.nameErr);
+                        event.error.nameArea.show();
+                    }
+                    if(data.voteErr){
+                        event.error.start.html(data.voteErr);
+                        event.error.startArea.show();
+                    }
+                }
+            }
+        });
+        }
+};
+return event;
+}
 
