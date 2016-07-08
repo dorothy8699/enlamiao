@@ -21,7 +21,6 @@
 
 {include file="include/header.inc"}
 
-
 <div style="width:100%;background:#e5e5e5;padding-top:40px;">
 <form id="createForm" action="finish.html" method="post">
 <div class="container">
@@ -51,7 +50,7 @@
 
     <div class="row">
       <div class="col-md-1 col-md-offset-1">
-          <img src="image/no1.svg" height="50px">
+          <img src="image/no1.svg" height="80px">
       </div>
       <div class="col-md-8">
         <!-- error message start -->
@@ -68,15 +67,54 @@
 
             <div class="title-up">请输入活动主题</div>
             <div class="title-down">团队建设、聚餐卡拉OK、旅行、登山、足球、游戏等</div>
-            <div style="padding-top:5px;">
-              <input type="text" id="title" class="title" name="title" style="height:30px;width:100%;" maxlength="100" alue="{$title}">
+            <div class="row mt5">
+                <div class="col-md-11">
+                  <div style="padding-top:5px;">
+                    <input type="text" id="title" class="title" name="title" style="height:40px;width:100%;" maxlength="100" alue="{$title}">
+                  </div>
+                </div>
+                <div class="col-md-1 tar">
+                  <img src="image/comment.svg">
+                </div>
             </div>
+
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mt10">
+        <div class="col-md-1 col-md-offset-1">
+          <img src="image/no1.svg" height="80px">
+        </div>
+        <div class="col-md-8">
+                <!-- error message start -->
+                <div id="end-error-area" class="error-area" style="{if isset($error['end'])}display:block;{else}display:none;{/if}">
+                  <div style="height:30px;line-height:30px;float:left;">
+                        <img src="image/warning.svg" height="20px">
+                  </div>
+                  <div id="end-error-msg" class="error-msg">
+                    {if isset($error['end'])}{$error['end']}{/if}
+                  </div>
+                  <div style="clear:both;"></div>
+                </div>
+                <!-- error message end -->
+                <div class="title-up">截止日期</div>
+                <div class="title-down">请选择投票截止日期</div>
+                <div class="title-down">系统默认有效期为30天</div>
+                
+                <div class="row mt5">
+                  <div class="col-md-11">
+                  <input type="text" id="end" class="end" name="end" maxlength="20" style="height:40px;width:100%;" value="{$end}"></input>
+                  </div>
+                  <div class="col-md-1 tar">
+                  <img src="image/comment.svg">
+                  </div>
+                </div>
+        </div>
+      </div>
+
+    <div class="row mt10">
       <div class="col-md-1 col-md-offset-1">
-         <img src="image/no1.svg" height="50px">
+         <img src="image/no1.svg" height="80px">
       </div>
       <div class="col-md-8">
               <!-- error message start -->
@@ -94,17 +132,25 @@
 
               <div class="title-up">请输入活动详细</div>
               <div class="title-down">地点、参加者、费用等</div>
-              <div style="padding-top:5px;">
-                <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="10" maxlength="3000">{if isset($content)}{$content|nl2br}{/if}</textarea>
-                
+
+              <div class="row mt5">
+                  <div class="col-md-11">
+                    <div style="padding-top:5px;">
+                    <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="10" maxlength="3000">{if isset($content)}{$content|nl2br}{/if}</textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-1 tar">
+                  <img src="image/comment.svg">
+                  </div>
               </div>
+              
       </div>
       </div>
 
 
-      <div class="row">
+      <div class="row mt10">
         <div class="col-md-1 col-md-offset-1">
-          <img src="image/no1.svg" height="50px">
+          <img src="image/no1.svg" height="80px">
         </div>
         <div class="col-md-8">
                 <!-- error message start -->
@@ -122,30 +168,18 @@
                 <div class="title-down">我要选时间</div>
                 <div class="title-down">我要选地点</div>
                 <div class="title-down">请换行输入每一个选项</div>
-                <textarea id="options" class="options" name="options" style="width:100%;resize:none;" rows="10">{if isset($options)}{$options}{/if}</textarea>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-1 col-md-offset-1">
-          <img src="image/no1.svg" height="50px">
-        </div>
-        <div class="col-md-8">
-                <!-- error message start -->
-                <div id="end-error-area" class="error-area" style="{if isset($error['end'])}display:block;{else}display:none;{/if}">
-                  <div style="height:30px;line-height:30px;float:left;">
-                        <img src="image/warning.svg" height="20px">
+                <div class="row mt5">
+                  <div class="col-md-11">
+                    <div style="padding-top:5px;">
+                    <textarea id="options" class="options" name="options" style="width:100%;resize:none;" rows="10">{if isset($options)}{$options}{/if}</textarea>
+                    </div>
                   </div>
-                  <div id="end-error-msg" class="error-msg">
-                    {if isset($error['end'])}{$error['end']}{/if}
+                  <div class="col-md-1 tar">
+                  <img src="image/comment.svg">
                   </div>
-                  <div style="clear:both;"></div>
-                </div>
-                <!-- error message end -->
-                <div class="title-up">截止日期</div>
-                <div class="title-down">请选择投票截止日期</div>
-                <div class="title-down">系统默认有效期为30天</div>
-                <input type="text" id="end" class="end" name="end" maxlength="20" style="height:30px;width:100%;" value="{$end}"></input>
+                </div>  
+                
         </div>
       </div>
 
