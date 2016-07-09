@@ -14,6 +14,8 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <link rel="stylesheet" href="css/layer.css" >
 		<title></title>
 	</head>
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
@@ -66,7 +68,6 @@
             <!-- error message end -->
 
             <div class="title-up">请输入活动主题</div>
-            <div class="title-down">团队建设、聚餐卡拉OK、旅行、登山、足球、游戏等</div>
             <div class="row mt5">
                 <div class="col-md-11">
                   <div style="padding-top:5px;">
@@ -74,7 +75,9 @@
                   </div>
                 </div>
                 <div class="col-md-1 tar">
-                  <img src="image/comment.svg">
+                  <div id="cmt1" class="pointer">
+                  {include file="image/comment.svg"}
+                  </div>
                 </div>
             </div>
 
@@ -97,16 +100,14 @@
                   <div style="clear:both;"></div>
                 </div>
                 <!-- error message end -->
-                <div class="title-up">截止日期</div>
-                <div class="title-down">请选择投票截止日期</div>
-                <div class="title-down">系统默认有效期为30天</div>
+                <div class="title-up">请选择有效期</div>
                 
                 <div class="row mt5">
                   <div class="col-md-11">
                   <input type="text" id="end" class="end" name="end" maxlength="20" style="height:40px;width:100%;" value="{$end}"></input>
                   </div>
                   <div class="col-md-1 tar">
-                  <img src="image/comment.svg">
+                  <div id="cmt2" class="pointer"><img src="image/comment.svg"></div>
                   </div>
                 </div>
         </div>
@@ -131,7 +132,6 @@
 
 
               <div class="title-up">请输入活动详细</div>
-              <div class="title-down">地点、参加者、费用等</div>
 
               <div class="row mt5">
                   <div class="col-md-11">
@@ -140,7 +140,7 @@
                     </div>
                   </div>
                   <div class="col-md-1 tar">
-                  <img src="image/comment.svg">
+                  <div id="cmt3" class="pointer"><img src="image/comment.svg"></div>
                   </div>
               </div>
               
@@ -165,8 +165,6 @@
                 </div>
                 <!-- error message end -->
                 <div class="title-up">发起投票</div>
-                <div class="title-down">我要选时间</div>
-                <div class="title-down">我要选地点</div>
                 <div class="title-down">请换行输入每一个选项</div>
 
                 <div class="row mt5">
@@ -176,7 +174,7 @@
                     </div>
                   </div>
                   <div class="col-md-1 tar">
-                  <img src="image/comment.svg">
+                  <div id="cmt4" class="pointer"><img src="image/comment.svg"></div>
                   </div>
                 </div>  
                 

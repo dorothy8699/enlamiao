@@ -68,6 +68,22 @@ $(document).ready(function(){
     	monthNames: [ "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" ],
     	dateFormat: "yy-mm-dd",
     });
+
+    $("#cmt1").click(function(){
+		layer.msg('<div class="tal">例1:团队建设策划方案<br>例2:班级活动意见收集<br>例3:户外活动策划方案<br>例4:员工聚餐活动策划方案<br>＊不能超过100字</div>');
+    });
+    
+    $("#cmt2").click(function(){
+    	layer.msg('<div class="tal">例:2016-06-06<br>＊系统默认方案有效期为30天</div>');
+    });
+
+    $("#cmt3").click(function(){
+    	layer.msg('<div class="tal">例:<br>参加人员:全部门人员<br>人均预算:300元<br>目的:加强凝聚力与团队协作能力<br>＊不能超过3000字</div>');
+    });
+
+    $("#cmt4").click(function(){
+    	layer.msg('<div class="tal">例1:<br>2016-06-06〜<br>2016-06-07〜<br>2016-06-08〜<br>2016-06-09〜<br>例2:<br>去烧烤<br>去登山<br>去农家院<br>去采摘<br>去K歌<br>＊请注意每一个选项必须换行<br>＊不能超过15个选项</div>');
+    });
 });
 
 
