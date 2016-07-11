@@ -75,7 +75,7 @@ $(document).ready(function(){
     });
     
     $("#cmt2").click(function(){
-    	layer.msg('<div id="comment2" class="tal">例:2016-06-06<div class="ft13 pdt5">＊系统默认方案有效期为30天</div></div>');
+    	layer.msg('<div id="comment2" class="tal">例:2016-06-06<div class="ft13 pdt5">*系统默认方案有效期为30天</div></div>');
     });
 
     $("#cmt3").click(function(){
