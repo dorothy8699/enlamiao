@@ -72,3 +72,36 @@
 .error-msg{
 	float:left;height:30px;line-height:30px;padding-left:10px;
 }
+
+
+/* 
+@keyframes jump {
+  0%, 
+  100% { top: 0%; transform: scaleX(1.1) scaleY(0); animation-timing-function: ease-in }
+  40%  { top: 80%; transform: scaleX(1)  scaleY(1)}
+  55%  { top: 90%; transform: scaleX(1.8) scaleY(1); animation-timing-function: ease-in-out  }
+  65%  { top: 30%; transform: scaleX(.6)  scaleY(1); animation-timing-function: ease-out }
+  80%  { transform: scaleX(1)   scaleY(1) }
+}*/
+
+
+@-webkit-keyframes bounce-up {
+  25% {-webkit-transform: translateY(10px);}
+  50%, 100% {-webkit-transform: translateY(0);}
+  75% {-webkit-transform: translateY(-10px);}
+ }
+ 
+ @keyframes bounce-up {
+  25% {transform: translateY(10px) scaleX(1) scaleY(1);}
+  50%, 100% {transform: translateY(0) scaleX(1.1) scaleY(1.1);}
+  75% {transform: translateY(-10px) scaleX(1) scaleY(1);}
+ }
+ 
+ .ball:hover{ -webkit-animation: bounce-up 3s linear infinite;animation: bounce-up 3s linear infinite;}
+
+
+
+
+
+
+

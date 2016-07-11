@@ -15,7 +15,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/layer.js"></script>
-    <link rel="stylesheet" href="css/layer.css" >
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
 		<title></title>
 	</head>
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
@@ -75,7 +75,7 @@
                   </div>
                 </div>
                 <div class="col-md-1 tar">
-                  <div id="cmt1" class="pointer">
+                  <div id="cmt1" class="pointer ball">
                   {include file="image/comment.svg"}
                   </div>
                 </div>
@@ -107,7 +107,7 @@
                   <input type="text" id="end" class="end" name="end" maxlength="20" style="height:40px;width:100%;" value="{$end}"></input>
                   </div>
                   <div class="col-md-1 tar">
-                  <div id="cmt2" class="pointer"><img src="image/comment.svg"></div>
+                  <div id="cmt2" class="pointer ball"><img src="image/comment.svg"></div>
                   </div>
                 </div>
         </div>
@@ -140,7 +140,7 @@
                     </div>
                   </div>
                   <div class="col-md-1 tar">
-                  <div id="cmt3" class="pointer"><img src="image/comment.svg"></div>
+                  <div id="cmt3" class="pointer ball"><img src="image/comment.svg"></div>
                   </div>
               </div>
               
@@ -174,7 +174,7 @@
                     </div>
                   </div>
                   <div class="col-md-1 tar">
-                  <div id="cmt4" class="pointer"><img src="image/comment.svg"></div>
+                  <div id="cmt4" class="pointer ball"><img src="image/comment.svg"></div>
                   </div>
                 </div>  
                 

@@ -69,21 +69,23 @@ $(document).ready(function(){
     	dateFormat: "yy-mm-dd",
     });
 
+
     $("#cmt1").click(function(){
-		layer.msg('<div class="tal">例1:团队建设策划方案<br>例2:班级活动意见收集<br>例3:户外活动策划方案<br>例4:员工聚餐活动策划方案<br>＊不能超过100字</div>');
+    	layer.msg('<div id="comment1" class="tal"><div class="ft15">例1:团队建设策划方案</div><div class="ft15">例2:班级活动意见收集</div><div class="ft15">例3:户外活动策划方案</div><div class="ft15">例4:员工聚餐活动策划方案</div><div class="ft13 pdt5">*活动标题不能超过100字</div></div>');
     });
     
     $("#cmt2").click(function(){
-    	layer.msg('<div class="tal">例:2016-06-06<br>＊系统默认方案有效期为30天</div>');
+    	layer.msg('<div id="comment2" class="tal">例:2016-06-06<div class="ft13 pdt5">＊系统默认方案有效期为30天</div></div>');
     });
 
     $("#cmt3").click(function(){
-    	layer.msg('<div class="tal">例:<br>参加人员:全部门人员<br>人均预算:300元<br>目的:加强凝聚力与团队协作能力<br>＊不能超过3000字</div>');
+    	layer.msg('<div id="comment3" class="tal"><div class="ft15">例:</div><div class="ft15">参加人员:全部门人员</div><div class="ft15">人均预算:300元</div><div class="ft15">活动目的:加强凝聚力与团队协作能力</div><div class="ft13 pdt5">*活动内容不能超过3000字</div></div>');
     });
 
     $("#cmt4").click(function(){
-    	layer.msg('<div class="tal">例1:<br>2016-06-06〜<br>2016-06-07〜<br>2016-06-08〜<br>2016-06-09〜<br>例2:<br>去烧烤<br>去登山<br>去农家院<br>去采摘<br>去K歌<br>＊请注意每一个选项必须换行<br>＊不能超过15个选项</div>');
+    	layer.msg('<div id="comment4" class="tal"><div class="ft15">例1:</div><div class="ft15">2016年6月6日〜</div><div class="ft15">2016年6月7日〜</div><div class="ft15">2016年6月8日〜</div><div class="ft15">2016年6月9日〜</div><div class="ft15 pdt5">例2:</div><div class="ft15">去烧烤</div><div class="ft15">去登山</div><div class="ft15">去农家院</div><div class="ft15">去采摘</div><div class="ft15">去K歌</div><div class="ft13 pdt5">*请注意每一个选项必须换行<br>*不能超过15个选项</div></div>');
     });
+
 });
 
 
