@@ -186,14 +186,8 @@
           </div>
         </div>
      </div>
-
-
 </div>
-</div>      
-
-
-
-
+</div>
 
 <!-- footer start-->
 {include file="include/footer.inc"}

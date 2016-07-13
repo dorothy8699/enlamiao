@@ -47,4 +47,13 @@ class Validator{
 		return $error;
 	}
 
+	public function filter($str){
+		$str = str_replace('<', '＜', $str);
+		$str = str_replace('>', '＞', $str);
+		$str = str_replace('&', '＆', $str);
+		$str = str_replace('"', '”', $str);
+		$str = str_replace('\'', '’', $str);
+		return $str;
+	}
+
 }

@@ -74,6 +74,8 @@ a{text-decoration: none;}
     margin-top:5px;
 }
 
-.tar{text-align: right;}
-.tal{text-align: left;}
+.tar{ text-align: right;}
+.tal{ text-align: left;}
+.btn{ border-radius:60px;width:100%;text-align:center;padding-bottom:5px;background:#de5233; }
+.btn:hover{background:#565656;color:#FFF;}
 

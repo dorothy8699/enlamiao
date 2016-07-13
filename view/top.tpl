@@ -54,7 +54,7 @@
   <div class="row">
     <div class="col-md-6">
       <div style="padding-left:10%;">
-      <img src="image/no1.svg" width="80%">
+      <img src="image/no1.svg" width="100%">
       </div>
     </div>
     <div class="col-md-5">

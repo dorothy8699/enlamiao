@@ -1,18 +1,66 @@
 function createEvent(){
 var event = {
-    param:{username: $("#username")},
+    param:{username: $("#username"),title: $("#title"), content:$("#content"), options:$("#options"), end:$("#end")},
     msg:{
         NAME_ERROR: "请输入1－20位字符",
         NAME_IS_BLANK: "请输入姓名或昵称",
         START_ERROR: "请完整选择所有日程",
-        START_WARNING: "非法输入"
+        START_WARNING: "非法输入",
+        TITLE_ERROR: "请输入1－100位字符",
+        TITLE_IS_BLANK: "活动主题不能为空",
+        CONTENT_ERROR: "请输入1－3000位字符",
+        CONTENT_IS_BLANK: "活动详细不能为空",
+        OPTIONS_IS_BLANK: "请输入1－15个候补选项",
+        END_IS_BLANK: "投票有效期不能为空"
     },
     error:{
         name: $("#name-error-msg"),
         start: $("#start-error-msg"),
         nameArea: $("#name-error-area"),
         startArea: $("#start-error-area"),
+        title: $("#title-error-msg"),
+        content: $("#content-error-msg"),
+        options: $("#options-error-msg"),
+        end: $("#end-error-msg"),
+        titleArea: $("#title-error-area"),
+        contentArea: $("#content-error-area"),
+        optionsArea: $("#options-error-area"),
+        endArea: $("#end-error-area"),
     },
+    checkCreateValue: function(){
+            var flg = false;
+            if(!this.param.title.val()){
+                this.error.title.html(this.msg.TITLE_IS_BLANK);
+                this.error.titleArea.show();
+                flg = true;
+            }
+            else if(this.param.title.val().length > 100){
+                this.error.title.html(this.msg.TITLE_ERROR);
+                this.error.titleArea.show();
+                flg = true;
+            }
+            if(!this.param.content.val()){
+                this.error.content.html(this.msg.CONTENT_IS_BLANK);
+                this.error.contentArea.show();
+                flg = true;
+            }
+            else if(this.param.content.val().length > 3000){
+                this.error.content.html(this.msg.CONTENT_ERROR);
+                this.error.contentArea.show();
+                flg = true;
+            }
+            if(!this.param.options.val()){
+                this.error.options.html(this.msg.OPTIONS_IS_BLANK);
+                this.error.optionsArea.show();
+                flg = true;
+            }
+            if(!this.param.end.val()){
+                this.error.end.html(this.msg.END_IS_BLANK);
+                this.error.endArea.show();
+                flg = true;
+            }
+            return flg;
+        },
     checkPollValue: function(){
             var flg = false;
             if(!this.param.username.val()){

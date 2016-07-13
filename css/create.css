@@ -8,46 +8,8 @@
 	font-size:18px;font-weight: bold;
 }
 
-/*.title,.content,.datetimes{
-	border: 2px solid #5bc3b5;
-}
-
-.title:focus,.content:focus,.datetimes:focus{
-	border: 2px solid #008080;
-}
-*/
-
-.xdsoft_datetimepicker{
-	background: #fafafa;
-    border: 0;
-}
-
-.xdsoft_datetimepicker .xdsoft_label {
-	background: #fafafa;
-}
-
-.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
-	border:1px solid #dbdee0;
-}
-
-.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
-	background: #008080;
-    box-shadow: #565656 0px 1px 3px 0px inset;
-    color: #fff;
-    font-weight: 700;
-}
-
-.xdsoft_datetimepicker  .xdsoft_calendar td:hover,
-.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div:hover{
-	color: #565656 !important;
-    background: #5bc3b5 !important;
-    box-shadow: none !important;
-}
-
-
-.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_today,.xdsoft_current{
-	background-color: #de5233;
-	color:#FFF;
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+	border:2px solid #de5233;
 }
 
 .createBtn{
@@ -66,7 +28,7 @@
 
 
 .error-area{
-	width:100%;/*border:1px solid #de5233;background:#fcf0ed;*/color:#de5233;/*padding-left:15px;*/
+	width:100%;color:#de5233;
 }
 
 .error-msg{
@@ -74,21 +36,10 @@
 }
 
 
-/* 
-@keyframes jump {
-  0%, 
-  100% { top: 0%; transform: scaleX(1.1) scaleY(0); animation-timing-function: ease-in }
-  40%  { top: 80%; transform: scaleX(1)  scaleY(1)}
-  55%  { top: 90%; transform: scaleX(1.8) scaleY(1); animation-timing-function: ease-in-out  }
-  65%  { top: 30%; transform: scaleX(.6)  scaleY(1); animation-timing-function: ease-out }
-  80%  { transform: scaleX(1)   scaleY(1) }
-}*/
-
-
 @-webkit-keyframes bounce-up {
-  25% {-webkit-transform: translateY(10px);}
-  50%, 100% {-webkit-transform: translateY(0);}
-  75% {-webkit-transform: translateY(-10px);}
+  25% {-webkit-transform: translateY(10px) scaleX(1) scaleY(1);}
+  50%, 100% {-webkit-transform: translateY(0) scaleX(1.1) scaleY(1.1);}
+  75% {-webkit-transform: translateY(-10px) scaleX(1) scaleY(1);}
  }
  
  @keyframes bounce-up {
