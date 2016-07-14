@@ -8,7 +8,7 @@ require './controller/errorController.php';
 /**
  * function showTop
  *
- * @author Dorothy <koueig@gmail.com> 2015-04-22
+ * @author Dorothy <koueig@gmail.com> 2016-07-07
  */ 
 function init(){	
 
@@ -17,16 +17,23 @@ function init(){
 
 	$validator = new Validator();
 
+	$param = array(
+		"title" => isset($_POST['title'])?$_POST['title']:"",
+		"content"=> isset($_POST['content'])?$_POST['content']:"",
+		"options"=> isset($_POST['options'])?$_POST['options']:"",
+		"end"=> isset($_POST['end'])?$_POST['end']:"",
+	);
+
 	$data = array(
-		"title"=>$validator->filter($_POST['title']),
-		"content"=>$validator->filter($_POST['content']),
-		"options"=>$validator->filter($_POST['options']),
-		"end"=>$_POST['end']
+		"title"=>$validator->filter($param['title']),
+		"content"=>$validator->filter($param['content']),
+		"options"=>$validator->filter($param['options']),
+		"end"=>$param['end']
 	);
 
 	if(empty($data['end'])) $data['end'] = date("Y-m-d",strtotime("+1 month"));
-
 	$error = $validator->checkCreateData($data);
+
 	if(!empty($error)) {
 		$smarty -> assign('error',$error); 
 		$smarty -> assign('title',$data['title']);

@@ -63,23 +63,25 @@
       <div class="col-md-8">
           <div class="title-up">候选项目</div>
           <div style="padding-top:5px;" class="table-responsive">
-              <table class="table table-hover">
+              <table class="table table-bordered table-hover">
                 <thead>
-                  <tr>
+                  <tr style="background:#565656;color:#FFF;"">
                       <th>我要选</th>
                       <th>OK</th>
                       <th>NG</th>
                       {foreach from=$voteuser item=name}
+                      {if !empty($name)}
                         <th>{$name}</th>
+                      {/if}  
                       {/foreach}
                   </tr>
                 </thead>
                 <tbody>
                   {foreach from=$pollresult item=p}
-                  <tr>
+                  <tr{if $p.yesCnt == $highlight} style="background:#5bc3b5;"{/if}>
                     <td>{$p.option}</td>
-                    <td>{$p.yes}人</td>
-                    <td>{$p.no}人</td>
+                    <td>{$p.yesCnt}人</td>
+                    <td>{$p.noCnt}人</td>
                       {foreach from=$p.user item=u}
                         {if !empty($u.voteimg)}
                         <td>

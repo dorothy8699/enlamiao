@@ -21,7 +21,6 @@ class Validator{
 			$rows = explode("\r\n", trim($params['options']));
 			if(count($rows) > 15) $error['options'] = "不能超过15项";
 		}
-
 		
 		$preg = "/^20[0-9]{2}-[0-1]{1}[0-9]{1}-[0-3]{1}[0-9]{1}$/";
 		if(!preg_match($preg, $params['end'])){
@@ -43,6 +42,15 @@ class Validator{
 			if(!preg_match("/^[1-2]{1}$/", $param['vote'])){
 				$error['voteErr'] = "每一项都必须投票";
 			}
+		}
+		return $error;
+	}
+
+	public function checkEID($eid){
+		$error = array();
+		$preg = "/^[A-Za-z0-9]{20}$/";
+		if(!preg_match($preg, $eid)){
+			$error['eid'] = "事件不存在";	
 		}
 		return $error;
 	}

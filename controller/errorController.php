@@ -16,5 +16,6 @@ class errorController{
 	public function gotoError($smarty, $msg){
 		$smarty -> assign('error_msg',self::$errors[$msg]);
 		$smarty->display('error.tpl');
+		exit;
 	}
 }

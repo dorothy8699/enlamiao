@@ -1,6 +1,7 @@
 <?php 
 require './core/MySmarty.class.php';
 require './model/MyDB.php';
+require './model/Validator.php';
 require './controller/errorController.php';
 
 /**
@@ -10,8 +11,11 @@ require './controller/errorController.php';
  */ 
 function init(){	
 	$smarty = new MySmarty();
-	$eid = $_GET['id'];
 	$Error = new errorController();
+	$validator = new Validator();
+
+	$eid = isset($_GET['eid'])?$_GET['eid']:"";
+	if($validator->checkEID($eid)) $Error->gotoError($smarty, "EXIST_ERROR");
 
 	try{
 		$mydb = new MyDB();
@@ -39,22 +43,16 @@ function init(){
 	
 
 	$optionArr = array();
+
 	foreach($result as $res) {
 		$optionArr[$res['pid']] = array(
 			'pid'=>$res['pid'],
     		'eid'=>$res['eid'],
     		'option'=>$res['opt'],
     		'user' => $res['uname'],
-    		'yes' => isset($optionArr[$res['pid']]['yes'])?$optionArr[$res['pid']]['yes']:0,
-    		'no' => isset($optionArr[$res['pid']]['no'])?$optionArr[$res['pid']]['no']:0
-		);
-
-		if($res['vote']===1){
-			$optionArr[$res['pid']]['yes'] = $optionArr[$res['pid']]['yes'] + 1;
-		}elseif($res['vote']===2){
-			$optionArr[$res['pid']]['no'] = $optionArr[$res['pid']]['no']+1;
-		}
-
+    		'yesCnt' => 0,
+    		'noCnt' => 0
+    	);
 
 		$image = "";
 		if($res['vote'] === 1){
@@ -67,18 +65,34 @@ function init(){
     	$voteArr[$res['pid']][] = array(
     		'uid'=>$res['uid'],
     		'uname'=>$res['uname'],
+    		'vote'=>$res['vote'],
     		'voteimg'=>$image,
     	);
 
     	$userArr[$res['uname']] = $res['uname'];
     	
 	}
+
 	foreach($voteArr as $key=>$value){
 		$optionArr[$key]['user'] = $value; 
 	}
 
+
+	foreach($optionArr as $options){
+		$pid = $options['pid'];
+		foreach($options['user'] as $user){
+			if($user['vote']===1){
+				$optionArr[$pid]['yesCnt'] = $optionArr[$pid]['yesCnt'] + 1;
+			}elseif($user['vote']===2){
+				$optionArr[$pid]['noCnt'] = $optionArr[$pid]['noCnt'] + 1;
+			}
+		}
+		$count[] = $optionArr[$pid]['yesCnt'];
+	}
+
     $smarty -> assign('voteuser',$userArr);
 	$smarty -> assign('pollresult',$optionArr);
+	$smarty -> assign('highlight',max($count));
 	$smarty->display('list.tpl');
 }
 
