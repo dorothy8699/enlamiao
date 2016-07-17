@@ -78,6 +78,25 @@ class MyDB extends DB{
             throw new Exception('Error');
         }
         return $result;
+    }
+
+    public function selectItemByID($eid){
+      $result = array();
+      $sql = "SELECT * FROM item where eid = ?";
+      try{
+        $stmt= $this->db->prepare($sql); 
+        $stmt->bind_param('s', $eid);
+        if(!$stmt->execute()) return false;
+        $stmt->store_result();
+        $stmt->bind_result($id);
+        while($stmt->fetch()) {
+          $result[] = $id;
+        }
+        $stmt->close();
+      }catch(Exception $e){
+        throw new Exception('Error');
+      }
+      return $result;
     }  
     
 
