@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
-
+    contentInputFlg = false;
+    optionsInputFlg = false;
     $("#createBtn").click(function(){
     	var event = createEvent();
         var status = event.checkCreateValue();
@@ -48,9 +49,21 @@ $(document).ready(function(){
         $(".title-ul").hide();
     });
 
-    $("textarea").bind('input propertychange', function() {
+    $("#content").bind('input propertychange', function() {
         if($(this).val().length > 0){
+            contentInputFlg = true;
             $(this).removeClass('color-gray');
+        }else{
+            contentInputFlg = false;
+        }
+    });
+
+    $("#options").bind('input propertychange', function() {
+        if($(this).val().length > 0){
+            optionsInputFlg = true;
+            $(this).removeClass('color-gray');
+        }else{
+            optionsInputFlg = false;
         }
     });
 

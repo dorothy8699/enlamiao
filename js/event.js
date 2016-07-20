@@ -39,7 +39,7 @@ var event = {
                 this.error.titleArea.show();
                 flg = true;
             }
-            if(!this.param.content.val()){
+            if(!this.param.content.val() || contentInputFlg == false){
                 this.error.content.html(this.msg.CONTENT_IS_BLANK);
                 this.error.contentArea.show();
                 flg = true;
@@ -49,7 +49,7 @@ var event = {
                 this.error.contentArea.show();
                 flg = true;
             }
-            if(!this.param.options.val()){
+            if(!this.param.options.val() || optionsInputFlg == false){
                 this.error.options.html(this.msg.OPTIONS_IS_BLANK);
                 this.error.optionsArea.show();
                 flg = true;
