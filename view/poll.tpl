@@ -20,7 +20,8 @@
         <div class="container">
             <div class="row">
               <div  class="col-md-8 col-md-offset-2">
-                  <div class="title-up" style="padding-bottom:10px;">请输入姓名或昵称</div>
+                  <div style="float:left;"><img src="image/no1.svg" height="50px"></div>
+                  <div class="title-up" style="padding-bottom:10px;height:50px;line-height:40px;">请输入姓名或昵称</div>
               </div>
             </div>  
 
@@ -34,6 +35,7 @@
                   <div id="name-error-msg" class="error-msg">
                     请输入姓名或昵称
                   </div>
+                  <div style="clear:both;"></div>
                 </div>
                 <!-- error message end -->
                 <input type="text" name="username" id="username" style="height:25px;">
@@ -42,7 +44,10 @@
 
             <div class="row">
               <div  class="col-md-8 col-md-offset-2">
-                  <div class="title-up" style="padding-top:20px;padding-bottom:10px;">请投票选择</div>
+                <div style="padding-top:20px;padding-bottom:10px;">
+                  <div style="float:left;"><img src="image/no1.svg" height="50px"></div>
+                  <div class="title-up" style="height:50px;line-height:40px;">请投票选择</div>
+                </div>  
               </div>
             </div>  
 

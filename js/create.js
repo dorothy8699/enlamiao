@@ -37,6 +37,50 @@ $(document).ready(function(){
     	layer.msg('<div id="comment4" class="tal"><div class="ft15">例1:</div><div class="ft15">2016年6月6日19:00开始</div><div class="ft15">2016年6月7日19:00开始</div><div class="ft15 pdt5">例2:</div><div class="ft15">去烧烤</div><div class="ft15">去登山</div><div class="ft15">去K歌</div></div>');
     });
 
+    $("#title").focus(function(){
+        $(".title-ul").show();
+    });
+
+    $(".title-ul ul li").click(function(){
+        $(".title-ul ul li").removeClass('color-bg-gray');
+        $("#title").val($.trim($(this).html()));
+        $(this).addClass('color-bg-gray');
+        $(".title-ul").hide();
+    });
+
+    $("textarea").bind('input propertychange', function() {
+        if($(this).val().length > 0){
+            $(this).removeClass('color-gray');
+        }
+    });
+
+    var egContent = '组织人：\n活动内容：\n活动目的：\n人均预算：\n注意事项：';
+    var egOptions = '例：\n去聚餐\n去登山\n去烧烤\n－－－或者－－－\n例：\n2016年6月6日～\n2016年6月7日～';
+    $("#content").val(egContent);
+    $("#options").val(egOptions);
+
+    $("#content").focus(function() {
+        if ($(this).val() != egContent) return;
+        $(this).val('');        
+    });
+
+    $("#content").blur(function() {
+        if ($(this).val() != '') return;
+        $(this).val(egContent);
+        $(this).addClass('color-gray');
+    });
+
+    $("#options").focus(function() {
+        if ($(this).val() != egOptions) return;
+        $(this).val('');        
+    });
+
+    $("#options").blur(function() {
+        if ($(this).val() != '') return;
+        $(this).val(egOptions);
+        $(this).addClass('color-gray');
+    });
+
 });
 
 

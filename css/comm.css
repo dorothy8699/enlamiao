@@ -19,7 +19,7 @@ input,textarea{
     background-color: #fafafa;
 }
 textarea{
-    padding-top:15px;
+    padding:15px;
 }
 
 input:focus,textarea:focus{

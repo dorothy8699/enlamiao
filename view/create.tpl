@@ -30,7 +30,7 @@
       <div class="col-md-1 col-md-offset-1">
           <img src="image/no1.svg" height="80px">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-9">
         <!-- error message start -->
             <div id="title-error-area" class="error-area" style="{if isset($error['title'])}display:block;{else}display:none;{/if}">
               <div style="height:30px;line-height:30px;float:left;">
@@ -47,14 +47,30 @@
             <div class="row mt5">
                 <div class="col-md-11">
                   <div style="padding-top:5px;">
-                    <input type="text" id="title" class="title" name="title" style="height:40px;width:100%;" maxlength="100" value="{if isset($title)}{$title}{/if}" placeholder="活动主题不能超过100字。如：团队建设">
+                    <input type="text" id="title" class="title" name="title" style="height:40px;width:100%;" maxlength="100" value="{if isset($title)}{$title}{/if}">
+                  </div>
+                  <div class="title-ul" style="display:none;">
+                    <ul>
+                      <li>
+                        团队建设
+                      </li>
+                      <li>
+                        班级活动
+                      </li>
+                      <li>
+                        户外活动
+                      </li>
+                      <li>
+                        员工聚餐
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-md-1 tar">
+                <!--<div class="col-md-1 tar">
                   <div id="cmt1" class="pointer ball">
                   {include file="image/comment.svg"}
                   </div>
-                </div>
+                </div>-->
             </div>
 
       </div>
@@ -64,7 +80,7 @@
         <div class="col-md-1 col-md-offset-1">
           <img src="image/no1.svg" height="80px">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
                 <!-- error message start -->
                 <div id="end-error-area" class="error-area" style="{if isset($error['end'])}display:block;{else}display:none;{/if}">
                   <div style="height:30px;line-height:30px;float:left;">
@@ -80,11 +96,11 @@
                 
                 <div class="row mt5">
                   <div class="col-md-11">
-                  <input type="text" id="end" class="end" name="end" maxlength="20" style="height:40px;width:100%;" value="{if isset($end)}{$end}{/if}" placeholder="有效期格式××××-××-××"></input>
+                  <input type="text" id="end" class="end" name="end" maxlength="20" style="height:40px;width:100%;" value="{if isset($end)}{$end}{/if}"></input>
                   </div>
-                  <div class="col-md-1 tar">
+                  <!--<div class="col-md-1 tar">
                   <div id="cmt2" class="pointer ball"><img src="image/comment.svg"></div>
-                  </div>
+                  </div>-->
                 </div>
         </div>
       </div>
@@ -93,7 +109,7 @@
       <div class="col-md-1 col-md-offset-1">
          <img src="image/no1.svg" height="80px">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-9">
               <!-- error message start -->
               <div id="content-error-area" class="error-area" style="{if isset($error['content'])}display:block;{else}display:none;{/if}">
                 <div style="height:30px;line-height:30px;float:left;">
@@ -112,12 +128,12 @@
               <div class="row mt5">
                   <div class="col-md-11">
                     <div style="padding-top:5px;">
-                    <textarea id="content" class="content" name="content" style="width:100%;resize:none;" rows="10" maxlength="3000" placeholder="活动内容不能超过3000字">{if isset($content)}{$content|nl2br}{/if}</textarea>
+                      <textarea id="content" class="content{if !isset($content)} color-gray{/if}" name="content" style="width:100%;resize:none;" rows="5" maxlength="3000">{if isset($content)}{$content|nl2br}{/if}</textarea>
                     </div>
                   </div>
-                  <div class="col-md-1 tar">
+                  <!--<div class="col-md-1 tar">
                   <div id="cmt3" class="pointer ball"><img src="image/comment.svg"></div>
-                  </div>
+                  </div>-->
               </div>
               
       </div>
@@ -128,7 +144,7 @@
         <div class="col-md-1 col-md-offset-1">
           <img src="image/no1.svg" height="80px">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
                 <!-- error message start -->
                 <div id="options-error-area" class="error-area" style="{if isset($error['options'])}display:block;{else}display:none;{/if}">
                   <div style="height:30px;line-height:30px;float:left;">
@@ -141,17 +157,17 @@
                 </div>
                 <!-- error message end -->
                 <div class="title-up">发起投票</div>
-                <!--<div class="title-down">请注意每输入一个选项必须换一行</div>-->
+                <div class="title-down">请注意每输入一个选项必须换一行</div>
 
                 <div class="row mt5">
                   <div class="col-md-11">
                     <div style="padding-top:5px;">
-                    <textarea id="options" class="options" name="options" style="width:100%;resize:none;" rows="10" placeholder="请注意每输入一个选项必须换一行">{if isset($options)}{$options}{/if}</textarea>
+                    <textarea id="options" class="options{if !isset($content)} color-gray{/if}" name="options" style="width:100%;resize:none;" rows="8">{if isset($options)}{$options}{/if}</textarea>
                     </div>
                   </div>
-                  <div class="col-md-1 tar">
-                  <div id="cmt4" class="pointer ball"><img src="image/comment.svg"></div>
-                  </div>
+                  <!--<div class="col-md-1 tar">
+                    <div id="cmt4" class="pointer ball"><img src="image/comment.svg"></div>
+                  </div>-->
                 </div>  
                 
         </div>

@@ -14,7 +14,7 @@ function init(){
 	$Error = new errorController();
 	$validator = new Validator();
 
-	$eid = isset($_GET['eid'])?$_GET['eid']:"";
+	$eid = isset($_GET['id'])?$_GET['id']:"";
 	if($validator->checkEID($eid)) $Error->gotoError($smarty, "EXIST_ERROR");
 
 	try{

@@ -16,9 +16,9 @@
 		<title></title>
 	</head>
 	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
-<div class="wrap"> 
+<div class="wrap" style="position:relative;"> 
 
-<nav class="navbar navbar-inverse site-navbar">
+<nav class="navbar navbar-inverse site-navbar" style="position:fixed;left:0;right:0;z-index:99;">
   <div class="container">
       <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -47,10 +47,8 @@
 </nav>
 
 
-<div style="background-color:#e5e5e5;width:100%;">
-
-<div class="container" style="padding-top:5%;">
-
+<div style="background-color:#e5e5e5;width:100%;position:absolute;top:70px;">
+<div class="container" style="padding-top:5%;position:relative;">
   <div class="row">
     <div class="col-md-6">
       <div style="padding-left:10%;">
@@ -64,17 +62,15 @@
           <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
           <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
           <a href="create.html">
-          <div id="startBtn" style="margin-top:50px;margin-left:25%;height:70px;line-height:70px;min-width:100px;width:50%;" class="font-en ft36 color-w pointer startBtn">
+          <div id="startBtn" style="margin-top:50px;margin-bottom:100px;margin-left:auto;margin-right:auto;height:70px;line-height:70px;min-width:100px;width:50%;" class="font-en ft36 color-w pointer startBtn">
             start
           </div>
           </a>
       </div>
       <!-- botton end -->
     </div>
-    <div class="col-md-1">
-    </div>
   </div>
-  <div class="row">
+  <div class="row" style="position:absolute;bottom:0;left:48%">
     <div class="col-md-12">
     <div class="arrow">
       <a href="#how"><span></span></a>

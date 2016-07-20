@@ -3,18 +3,19 @@ CREATE TABLE `event` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `eid` varchar(32) NOT NULL DEFAULT '',
   `title` varchar(200) NOT NULL,
-  `content` varchar(1000) NOT NULL,
-  `start` varchar(500) NOT NULL,
+  `content` varchar(1000) DEFAULT '',
+  `options` varchar(3000) DEFAULT '',
+  `end` date NOT NULL,
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=267 DEFAULT CHARSET=utf8;
 
--- Create syntax for TABLE 'period'
-CREATE TABLE `period` (
+-- Create syntax for TABLE 'item'
+CREATE TABLE `item` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `eid` varchar(32) NOT NULL DEFAULT '',
-  `begin` varchar(200) NOT NULL DEFAULT '',
+  `opt` varchar(200) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=909 DEFAULT CHARSET=utf8;
 
 -- Create syntax for TABLE 'user'
 CREATE TABLE `user` (
@@ -24,4 +25,4 @@ CREATE TABLE `user` (
   `name` varchar(100) NOT NULL,
   `vote` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=710 DEFAULT CHARSET=utf8;

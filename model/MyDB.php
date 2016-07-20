@@ -82,7 +82,7 @@ class MyDB extends DB{
 
     public function selectItemByID($eid){
       $result = array();
-      $sql = "SELECT * FROM item where eid = ?";
+      $sql = "SELECT id FROM item where eid = ?";
       try{
         $stmt= $this->db->prepare($sql); 
         $stmt->bind_param('s', $eid);

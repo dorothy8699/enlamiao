@@ -41,7 +41,7 @@
       </div>
       <div class="col-md-8">
           <div class="title-up">活动详细</div>
-          <div style="padding-top:5px;" class="title-down">{$content}</div>
+          <div style="padding-top:5px;" class="title-down">{$content|nl2br}</div>
       </div>
     </div>
 
@@ -78,7 +78,7 @@
                 </thead>
                 <tbody>
                   {foreach from=$pollresult item=p}
-                  <tr{if $p.yesCnt == $highlight} style="background:#5bc3b5;"{/if}>
+                  <tr{if $p.yesCnt>0 && $p.yesCnt == $highlight} style="background:#5bc3b5;"{/if}>
                     <td>{$p.option}</td>
                     <td>{$p.yesCnt}人</td>
                     <td>{$p.noCnt}人</td>
@@ -176,7 +176,7 @@
         </div>
     </form>
 
-    <div class="row mt30">
+    <div class="row">
         <div class="col-md-1 col-md-offset-1">
         </div>
         <div class="col-md-8">
