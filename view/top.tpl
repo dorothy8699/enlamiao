@@ -33,13 +33,13 @@
           <ul class="nav navbar-nav">
               <li><a href="./">首页</a>
               </li>
-              <li><a href="docs/">关于嗯啦喵</a>
+              <li><a href="./">关于嗯啦喵</a>
               </li>
-              <li><a href="docs/getting-started/">使用方法</a>
+              <li><a href="./">使用方法</a>
               </li>
-              <li><a href="docs/faq/">常见问题</a>
+              <li><a href="./">常见问题</a>
               </li>
-              <li><a href="docs/recipes/">联系我</a>
+              <li><a href="./">联系我</a>
               </li>
           </ul>
       </div>
@@ -59,9 +59,9 @@
     <div class="col-md-5">
       <!-- botton start -->
       <div class="smpreInfo">
-          <div style="font-size:18px;line-height:26px;">嗯啦喵是一款调查<br>团队活动参与意向的小工具</div>
-          <div class="pdt15 ft13">您只需一键<span class="color-r">发布</span>活动计划</div>
-          <div class="ft13">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+          <div style="font-size:15px;line-height:26px;">嗯啦喵是一款调查<br>团队活动参与意向的小工具</div>
+          <div class="pdt15 ft11">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div class="ft11">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
           <a href="create.html">
           <div id="startBtn" class="font-en ft36 color-w pointer smstartBtn mt10">
             start
