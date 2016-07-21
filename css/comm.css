@@ -62,17 +62,17 @@ a{text-decoration: none;}
     border-radius:100px;
 }
 
-.mt30{
-    margin-top:30px;
-}
 
-.mt10{
-    margin-top:10px;
-}
+.mt5{ margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt30{margin-top:30px;}
+.mt50{ margin-top:50px;}
 
-.mt5{
-    margin-top:5px;
-}
+.pdt10{ padding-top:10px;}
+.pdt15{ padding-top:15px;}
+.pdt40{ padding-top:40px;}
+
+
 
 .tar{ text-align: right;}
 .tal{ text-align: left;}

@@ -49,20 +49,21 @@
 
 <div style="background-color:#e5e5e5;width:100%;position:absolute;top:70px;">
 <div class="container" style="padding-top:5%;position:relative;">
+{if $smFlg}
   <div class="row">
     <div class="col-md-6">
-      <div style="padding-left:10%;">
-      <img src="image/no1.svg" width="100%">
+      <div style="margin:auto 5%;">
+      <img src="image/smno.svg" width="100%" style="vertical-align:vertical-align:middl">
       </div>
     </div>
     <div class="col-md-5">
       <!-- botton start -->
-      <div style="padding-top:20%;color:#565656;text-align:center;">
+      <div class="smpreInfo">
           <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
-          <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
-          <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+          <div class="pdt15 ft15">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div class="ft15 pdt5">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
           <a href="create.html">
-          <div id="startBtn" style="margin-top:50px;margin-bottom:100px;margin-left:auto;margin-right:auto;height:70px;line-height:70px;min-width:100px;width:50%;" class="font-en ft36 color-w pointer startBtn">
+          <div id="startBtn" class="font-en ft36 color-w pointer startBtn mt10">
             start
           </div>
           </a>
@@ -70,6 +71,29 @@
       <!-- botton end -->
     </div>
   </div>
+{else}
+    <div class="row">
+      <div class="col-md-6">
+        <div style="padding-left:10%;">
+        <img id="preImg" class="preImg" src="image/no1.svg" width="100%">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <!-- botton start -->
+        <div id="preInfo" class="preInfo">
+            <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+            <div id="preIntr" class="pdt40 ft15">您只需一键<span class="color-r">发布</span>活动计划</div>
+            <div id="preDes" class="ft15 pdt10">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+            <a href="create.html">
+            <div id="startBtn" style="margin-top:50px;" class="font-en ft36 color-w pointer startBtn mt50">
+              start
+            </div>
+            </a>
+        </div>
+        <!-- botton end -->
+      </div>
+    </div>
+{/if}  
   <div class="row" style="position:absolute;bottom:0;left:48%">
     <div class="col-md-12">
     <div class="arrow">
@@ -187,3 +211,5 @@
 </div>
 	</body>
 </html>
+
+

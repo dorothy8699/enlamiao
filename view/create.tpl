@@ -175,7 +175,7 @@
 
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <div style="width:100%;padding-top:60px;padding-bottom:150px;width:20%;">
+          <div style="width:100%;padding-top:20px;padding-bottom:150px;width:20%;">
             <div id="createBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer createBtn">
               OK
             </div>
