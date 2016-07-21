@@ -52,18 +52,18 @@
 {if $smFlg}
   <div class="row">
     <div class="col-md-6">
-      <div style="margin:auto 5%;">
-      <img src="image/smno.svg" width="100%" style="vertical-align:vertical-align:middl">
+      <div style="margin:auto 18%;">
+      <img src="image/smno.svg" width="100%">
       </div>
     </div>
     <div class="col-md-5">
       <!-- botton start -->
       <div class="smpreInfo">
-          <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
-          <div class="pdt15 ft15">您只需一键<span class="color-r">发布</span>活动计划</div>
-          <div class="ft15 pdt5">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
+          <div style="font-size:18px;line-height:26px;">嗯啦喵是一款调查<br>团队活动参与意向的小工具</div>
+          <div class="pdt15 ft13">您只需一键<span class="color-r">发布</span>活动计划</div>
+          <div class="ft13">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
           <a href="create.html">
-          <div id="startBtn" class="font-en ft36 color-w pointer startBtn mt10">
+          <div id="startBtn" class="font-en ft36 color-w pointer smstartBtn mt10">
             start
           </div>
           </a>
