@@ -21,12 +21,16 @@ function init(){
 
 
 	$polling = array();
+	$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	$chars = str_shuffle($chars);
+	$uid = substr($chars,0,10) . strtotime(date("Y-m-d H:i:s",time()));
 	foreach($_POST as $key=>$value){
 		if(substr($key,0,4) === "poll"){
 			$pid = substr($key, 4);
 			$polling[$pid] = array(
 				'pid' => $pid,
 				'eid' => $params['eventid'],
+				'uid' => $uid,
 				'name' => $params['username'],
 				'vote' => $value
 			);
@@ -45,6 +49,7 @@ function init(){
 			$polling[$option] = array(
 				'pid' => "",
 				'eid' => "",
+				'uid' => "",
 				'name' => "",
 				'vote' => ""
 			);
@@ -57,32 +62,13 @@ function init(){
 	if(!empty($error)){
 		echo json_encode($error);
 	}else{
-		$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
-		$sql = "INSERT INTO user(pid, eid, name, vote) VALUES(?,?,?,?)";
-
-		foreach($polling as $data){
-			$stmt= $db->prepare($sql); 
-			$stmt->bind_param('ssss', $data['pid'], $data['eid'], $data['name'], $data['vote']); 
-			$stmt->execute();
+		try{
+			$result = $mydb->insertUser($polling);
+			echo json_encode("success");
+		}catch(Exception $e){
+			echo json_encode($error);
 		}
-
-		echo json_encode("success");
 	}
-}
-
-function getItems($eid){
-		$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
-		$sql = "SELECT id from item where eid=?";
-		$stmt= $db->prepare($sql); 
-		$stmt->bind_param('s', $eid); 
-		$stmt->execute();
-		$stmt->store_result();
-		$stmt->bind_result($id);
-		$items = array();
-		while($stmt->fetch()) {
-			$items[] = $id;
-		}
-		return $items;
 }
 
 

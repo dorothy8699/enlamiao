@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
 		<title></title>
 	</head>
-	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
+	<body style="margin:0;padding:0;"> 
 <div class="wrap"> 
 
 {include file="include/header.inc"}

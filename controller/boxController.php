@@ -1,43 +1,47 @@
 <?php 
 
 require './core/MySmarty.class.php';
+require './model/MyDB.php';
+require './controller/errorController.php';
 /**
- * function showTop
+ * function init
  *
- * @author Dorothy <koueig@gmail.com> 2015-04-22
+ * @author Dorothy <koueig@gmail.com> 2016-07-02
  */ 
-function init(){	
-	
-	$eid = $_GET['id'];
-	$db = new mysqli('localhost', 'root', '7DMKneaa','enlamiao');
-	
-	$sql = "SELECT * FROM event where eid=?";
-	$stmt= $db->prepare($sql); 
-	$stmt->bind_param('s', $eid); 
-	$stmt->execute();
-	$stmt->store_result();
-	$stmt->bind_result($id,$eid,$title,$content,$option,$end);
-	$stmt->fetch();
+function init(){
 	$smarty = new MySmarty();
+	$Error = new errorController();
+	$eid = $_GET['id'];
+	try{
+		$mydb = new MyDB();
+		$result = $mydb->selectEventByID($eid);
+	}catch(Exception $e){
+		$Error->gotoIframeError($smarty, "SERVER_IERROR");
+	}
+	if(!$result) $Error->gotoIframeError($smarty, "EXIST_IERROR");
+	
+	
+	$smarty -> assign('id',$result['id']);
+	$smarty -> assign('eid',$result['eid']);
+	$smarty -> assign('title',$result['title']);
+	$smarty -> assign('content',$result['content']);
+	$smarty -> assign('start',$result['option']);
+	$smarty -> assign('end',$result['end']);
 
-	$smarty -> assign('id',$id);
-	$smarty -> assign('eid',$eid);
-	$smarty -> assign('title',$title);
-	$smarty -> assign('content',$content);
-	$smarty -> assign('start',$option);
-	$smarty -> assign('start',$end);
 
+	try{
+		$mydb = new MyDB();
+		$result = $mydb->selectVoteByID($eid);
+	}catch(Exception $e){
+		$Error->gotoIframeError($smarty, "SERVER_IERROR");
+	}
+	if(!$result) $Error->gotoIframeError($smarty, "EXIST_IERROR");
 
-	$sql = "SELECT i.id as pid, i.eid as eid,i.opt as opt,u.id as uid,u.name as uname,u.vote FROM item as i left join user as u on i.id=u.pid where i.eid=?";
-	$stmt= $db->prepare($sql); 
-	$stmt->bind_param('s', $eid); 
-	$stmt->execute();
-	$stmt->store_result();
 	$optionArr = array();
-	$stmt->bind_result($pid,$eid,$opt,$uid,$uname,$vote);
-
-	$optionArr = array();
-	while($stmt->fetch()) {
+	foreach($result as $res) {
+		$pid = $res['pid'];
+		$eid = $res['eid'];
+		$opt = $res['opt'];
 		$optionArr[$pid] = array(
 			'pid'=>$pid,
     		'eid'=>$eid,
@@ -46,38 +50,8 @@ function init(){
     		'yes' => isset($optionArr[$pid]['yes'])?$optionArr[$pid]['yes']:0,
     		'no' => isset($optionArr[$pid]['no'])?$optionArr[$pid]['no']:0
 		);
-
-		if($vote===1){
-			$optionArr[$pid]['yes'] = $optionArr[$pid]['yes']+1;
-		}elseif($vote===2){
-			$optionArr[$pid]['no'] = $optionArr[$pid]['no']+1;
-		}
-
-
-		$image = "";
-		if($vote === 1){
-			$image = "image/clickedyes.svg";
-		}
-		elseif($vote ===2){
-			$image = "image/clickedno.svg";
-		}
-		
-    	$voteArr[$pid][] = array(
-    		'uid'=>$uid,
-    		'uname'=>$uname,
-    		'voteimg'=>$image,
-    	);
-
-    	$userArr[$uname] = $uname;
     	
 	}
-	foreach($voteArr as $key=>$value){
-		$optionArr[$key]['user'] = $value; 
-	}
-
-    $stmt->close();
-    $db->close();
-    $smarty -> assign('voteuser',$userArr);
 	$smarty -> assign('pollresult',$optionArr);
 	$smarty->display('poll.tpl');
 

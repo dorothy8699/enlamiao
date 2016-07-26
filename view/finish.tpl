@@ -34,7 +34,7 @@
       	<h2>恭喜您！</h2>
       	<div style="line-height:30px;">
 	      	成功创建活动<br>
-	      	您的投票数据将在活动结束后一周内实效</br>
+	      	您的投票数据将在活动结束后一个月内失效</br>
 	      	请及时分享以下链接并收集投票结果</br>
 			<a href="{$link}" target="_blank">{$link}</a>
 		</div>

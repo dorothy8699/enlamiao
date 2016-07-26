@@ -15,7 +15,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<title></title>
 	</head>
-	<body style="margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
+	<body style="margin:0;padding:0;"> 
 <div class="wrap" style="position:relative;"> 
 
 <nav class="navbar navbar-inverse site-navbar" style="position:fixed;left:0;right:0;z-index:99;">

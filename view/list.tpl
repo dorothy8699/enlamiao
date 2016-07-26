@@ -15,7 +15,7 @@
     <script type="text/javascript" src="js/layer.js"></script>
 		<title></title>
 	</head>
-	<body style="width:100%;height:100%;margin:0;padding:0;font-family:Consolas,Monaco,Lucida Console,monospace;"> 
+	<body style="width:100%;height:100%;margin:0;padding:0;"> 
 <div class="wrap"> 
 
 
@@ -167,7 +167,7 @@
           <div class="col-md-1 col-md-offset-1">
           </div>
           <div class="col-md-8">
-            <div style="width:100%;padding-top:20px;padding-bottom:150px;width:20%;">
+            <div style="width:100%;width:20%;">
               <div id="pollBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer listBtn">
                 VOTE
               </div>
@@ -180,7 +180,7 @@
         <div class="col-md-1 col-md-offset-1">
         </div>
         <div class="col-md-8">
-          <div style="width:100%;padding-top:20px;padding-bottom:150px;width:20%;">
+          <div style="width:100%;padding-top:10px;padding-bottom:150px;width:20%;">
             <div id="listBtn" style="height:60px;line-height:60px;min-width:100px;" class="font-en ft36 color-w pointer listBtn">
               OK
             </div>

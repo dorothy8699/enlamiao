@@ -1,4 +1,3 @@
--- Create syntax for TABLE 'event'
 CREATE TABLE `event` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `eid` varchar(32) NOT NULL DEFAULT '',
@@ -6,23 +5,31 @@ CREATE TABLE `event` (
   `content` varchar(1000) DEFAULT '',
   `options` varchar(3000) DEFAULT '',
   `end` date NOT NULL,
+  `createDate` datetime NOT NULL,
+  `deleteDate` datetime DEFAULT NULL,
+  `deleteFlg` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=267 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8;
 
--- Create syntax for TABLE 'item'
 CREATE TABLE `item` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `eid` varchar(32) NOT NULL DEFAULT '',
   `opt` varchar(200) NOT NULL DEFAULT '',
+  `createDate` datetime NOT NULL,
+  `deleteDate` datetime DEFAULT NULL,
+  `deleteFlg` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=909 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=935 DEFAULT CHARSET=utf8;
 
--- Create syntax for TABLE 'user'
-CREATE TABLE `user` (
+CREATE TABLE `vote` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
+  `uid` varchar(32) NOT NULL DEFAULT '',
   `pid` int(10) NOT NULL,
   `eid` varchar(32) NOT NULL DEFAULT '',
   `name` varchar(100) NOT NULL,
   `vote` tinyint(1) NOT NULL,
+  `createDate` datetime NOT NULL,
+  `deleteDate` datetime DEFAULT NULL,
+  `deleteFlg` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`,`eid`)
-) ENGINE=InnoDB AUTO_INCREMENT=710 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=740 DEFAULT CHARSET=utf8;

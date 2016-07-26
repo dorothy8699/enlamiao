@@ -69,7 +69,7 @@ function init(){
     		'voteimg'=>$image,
     	);
 
-    	$userArr[$res['uname']] = $res['uname'];
+    	$userArr[$res['uid']] = $res['uname'];
     	
 	}
 
