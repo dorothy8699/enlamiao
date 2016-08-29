@@ -3,6 +3,8 @@
 	<head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     <meta name="keywords" content="问卷调查,投票,活动策划,嗯啦喵,enlamiao">
+     <meta name="description" content="嗯啦喵是一款免费的在线投票工具,无须注册即可通过嗯啦喵发布问卷调查,收集参与者意向">
      <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
      <link rel="stylesheet" href="css/comm.css" >
      <link rel="stylesheet" href="css/top.css" >
@@ -13,7 +15,7 @@
     <script type="text/javascript" src="js/top.js"></script>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<title></title>
+		<title>嗯啦喵－免费的调查团队活动参与意向的平台</title>
 	</head>
 	<body style="margin:0;padding:0;"> 
 <div class="wrap" style="position:relative;"> 
@@ -61,7 +63,7 @@
       <div class="smpreInfo">
           <div style="font-size:15px;line-height:20px;">嗯啦喵是一款调查<br>团队活动参与意向的小工具</div>
           <div class="pdt15 ft11" style="line-height:15px;">
-            您只需一键<span class="color-r">发布</span>活动计划<br>
+            无须注册即可一键<span class="color-r">发布</span>活动计划<br>
             嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向
           </div>
           
@@ -85,7 +87,7 @@
         <!-- botton start -->
         <div id="preInfo" class="preInfo">
             <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
-            <div id="preIntr" class="pdt40 ft15">您只需一键<span class="color-r">发布</span>活动计划</div>
+            <div id="preIntr" class="pdt40 ft15">无须注册即可一键<span class="color-r">发布</span>活动计划</div>
             <div id="preDes" class="ft15 pdt10">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
             <a href="create.html">
             <div id="startBtn" style="margin-top:50px;" class="font-en ft36 color-w pointer startBtn mt50">
@@ -112,10 +114,16 @@
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
-          <li style="float:left;padding-left:20%;"><div class="min-circle-select"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+        <ul style="list-style:none;margin-top:60px;">
+          <li style="float:left;padding-left:20%;">
+          <div class="min-circle-select">
+            <div class="min-circle-inner"></div>
+          </div>
+          </li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
         </ul>
      </div> 
   </div> 
@@ -124,9 +132,8 @@
     <div class="col-md-4">
       <!-- botton start -->
       <div style="padding-top:20%;color:#565656;text-align:center;">
-          <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
+          <div style="font-size:22px;line-height:28px;">在线创建调查问卷</div>
           <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
-          <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
       </div>
       <!-- botton end -->
     </div>
@@ -137,18 +144,18 @@
     </div>
   </div>
 
-  <!--<div class="row">
+  <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div style="border-top:2px solid #e5e5e5;margin-top:40px;margin-bottom:40px;"></div>
-    </div>
-  </div>-->
-
-    <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
+        <ul style="list-style:none;margin-top:60px;">
           <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle-select"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;">
+          <div class="min-circle-select">
+            <div class="min-circle-inner"></div>
+          </div>
+          </li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
         </ul>
      </div> 
   </div> 
@@ -171,17 +178,18 @@
     </div>
     </div>
 
-    <!--<div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div style="border-top:2px solid #e5e5e5;margin-top:40px;margin-bottom:40px;"></div>
-      </div>
-    </div>-->
-      <div class="row">
+  <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;border-top:2px solid #e5e5e5;margin-top:60px;margin-bottom:20px;">
+        <ul style="list-style:none;margin-top:60px;">
           <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle"></div></li>
-          <li style="float:left;padding-left:15%;"><div class="min-circle-select"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;">
+          <div class="min-circle-select">
+            <div class="min-circle-inner"></div>
+          </div>
+          </li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
+          <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
         </ul>
      </div> 
   </div> 
