@@ -109,12 +109,12 @@
 </div>
 
 <div style="background-color:#fafafa;width:100%;">
-<div class="container" style="padding-top:5%;padding-bottom:5%;">
+<div class="container">
 
 
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;margin-top:60px;">
+    <div class="col-md-8 col-md-offset-2" style="padding-top:10%;padding-bottom:5%;">
+        <ul style="list-style:none;">
           <li style="float:left;padding-left:20%;">
           <div class="min-circle-select">
             <div class="min-circle-inner"></div>
@@ -131,7 +131,7 @@
   <div class="row">
     <div class="col-md-4">
       <!-- botton start -->
-      <div style="padding-top:20%;color:#565656;text-align:center;">
+      <div style="color:#565656;text-align:center;">
           <div style="font-size:22px;line-height:28px;">在线创建调查问卷</div>
           <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
       </div>
@@ -139,14 +139,14 @@
     </div>
     <div class="col-md-8">
       <div>
-      <img src="image/example1.svg" width="100%">
+      <img src="image/guide1.svg" width="100%">
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;margin-top:60px;">
+        <div class="col-md-8 col-md-offset-2" style="padding-top:10%;padding-bottom:5%;">
+        <ul style="list-style:none;">
           <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
           <li style="float:left;padding-left:6%;">
           <div class="min-circle-select">
@@ -164,7 +164,7 @@
     <div class="row">
     <div class="col-md-4">
       <!-- botton start -->
-      <div style="padding-top:20%;color:#565656;text-align:center;">
+      <div style="color:#565656;text-align:center;">
           <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
           <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
           <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>
@@ -179,8 +179,8 @@
     </div>
 
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <ul style="list-style:none;margin-top:60px;">
+      <div class="col-md-8 col-md-offset-2" style="padding-top:10%;padding-bottom:5%;">
+        <ul style="list-style:none;">
           <li style="float:left;padding-left:20%;"><div class="min-circle"></div></li>
           <li style="float:left;padding-left:6%;"><div class="min-circle"></div></li>
           <li style="float:left;padding-left:6%;">
@@ -198,7 +198,7 @@
     <div class="row">
     <div class="col-md-4">
       <!-- botton start -->
-      <div style="padding-top:20%;color:#565656;text-align:center;">
+      <div style="color:#565656;text-align:center;">
           <div style="font-size:22px;line-height:28px;">嗯啦喵是一款调查团队活动参与意向的小工具</div>
           <div style="font-size:15px;padding-top:40px;">您只需一键<span class="color-r">发布</span>活动计划</div>
           <div style="font-size:15px;padding-top:10px;">嗯啦喵可以帮您<span class="color-r">收集</span>活动参加者意向</div>

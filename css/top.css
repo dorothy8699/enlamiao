@@ -162,7 +162,7 @@ input:hover,textarea:hover{
 }
 
 .min-circle-select{
-	width:30px;height:30px;background:#565656;border-radius:30px;margin-top:-15px;padding-left:-4px;padding-top:26px;
+	width:30px;height:30px;background:#e5e5e5;border-radius:30px;margin-top:-15px;padding-left:5px;padding-top:15px;
 }
 
 .min-circle-inner{
